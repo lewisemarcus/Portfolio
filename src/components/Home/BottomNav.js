@@ -38,10 +38,7 @@ const BottomNav = () => {
                     setValue(newValue)
                 }}
             >
-                <BottomNavigationAction
-                    label="Call or Text"
-                    icon={<PhoneIcon />}
-                />
+                <BottomNavigationAction label="Phone" icon={<PhoneIcon />} />
 
                 <BottomNavigationAction label="Email" icon={<EmailIcon />} />
                 <BottomNavigationAction

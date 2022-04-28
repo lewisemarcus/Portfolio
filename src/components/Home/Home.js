@@ -13,7 +13,7 @@ const Home = () => {
     return (
         <Container>
             <ParticleEffect />
-            <Fade in={true} timeout={1000}>
+            <Fade in={true} timeout={2000}>
                 <div style={heroStyle}>
                     <Hero />
                     <BottomNav />

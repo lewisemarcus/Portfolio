@@ -8,7 +8,7 @@ import CardActions from "@mui/material/CardActions"
 import CardContent from "@mui/material/CardContent"
 import CardMedia from "@mui/material/CardMedia"
 
-const MediaCard = () => {
+const Project = () => {
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardMedia
@@ -35,4 +35,4 @@ const MediaCard = () => {
     )
 }
 
-export default Projects
+export default Project
