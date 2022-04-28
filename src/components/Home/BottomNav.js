@@ -4,9 +4,10 @@ import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import BottomNavigation from "@mui/material/BottomNavigation"
 import BottomNavigationAction from "@mui/material/BottomNavigationAction"
-import RestoreIcon from "@mui/icons-material/Restore"
-import FavoriteIcon from "@mui/icons-material/Favorite"
-import LocationOnIcon from "@mui/icons-material/LocationOn"
+import PhoneIcon from "@mui/icons-material/Phone"
+import EmailIcon from "@mui/icons-material/Email"
+import LinkedInIcon from "@mui/icons-material/LinkedIn"
+import GitHubIcon from "@mui/icons-material/GitHub"
 import Link from "@mui/material/Link"
 
 function Copyright() {
@@ -38,17 +39,16 @@ const BottomNav = () => {
                 }}
             >
                 <BottomNavigationAction
-                    label="Recents"
-                    icon={<RestoreIcon />}
+                    label="Call or Text"
+                    icon={<PhoneIcon />}
                 />
+
+                <BottomNavigationAction label="Email" icon={<EmailIcon />} />
                 <BottomNavigationAction
-                    label="Favorites"
-                    icon={<FavoriteIcon />}
+                    label="LinkedIn"
+                    icon={<LinkedInIcon />}
                 />
-                <BottomNavigationAction
-                    label="Nearby"
-                    icon={<LocationOnIcon />}
-                />
+                <BottomNavigationAction label="Github" icon={<GitHubIcon />} />
                 {/* Footer */}
                 <Box
                     sx={{ bgcolor: "background.paper", p: 3 }}
