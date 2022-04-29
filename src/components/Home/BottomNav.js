@@ -9,6 +9,7 @@ import EmailIcon from "@mui/icons-material/Email"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import GitHubIcon from "@mui/icons-material/GitHub"
 import Link from "@mui/material/Link"
+import "./BottomNav.css"
 
 function Copyright() {
     return (
@@ -41,14 +42,24 @@ const BottomNav = () => {
                 <Link color="inherit" href="tel:+9493224186">
                     <BottomNavigationAction
                         label="Phone"
-                        icon={<PhoneIcon />}
+                        icon={
+                            <PhoneIcon
+                                className={"MyButton"}
+                                sx={{ fontSize: 30 }}
+                            />
+                        }
                     />
                 </Link>
 
                 <Link color="inherit" href="mailto: lewisemarcus@gmail.com">
                     <BottomNavigationAction
                         label="Email"
-                        icon={<EmailIcon />}
+                        icon={
+                            <EmailIcon
+                                className={"MyButton"}
+                                sx={{ fontSize: 30 }}
+                            />
+                        }
                     />
                 </Link>
 
@@ -60,7 +71,12 @@ const BottomNav = () => {
                 >
                     <BottomNavigationAction
                         label="LinkedIn"
-                        icon={<LinkedInIcon />}
+                        icon={
+                            <LinkedInIcon
+                                className={"MyButton"}
+                                sx={{ fontSize: 30 }}
+                            />
+                        }
                     />
                 </Link>
 
@@ -72,7 +88,12 @@ const BottomNav = () => {
                 >
                     <BottomNavigationAction
                         label="Github"
-                        icon={<GitHubIcon />}
+                        icon={
+                            <GitHubIcon
+                                className={"MyButton"}
+                                sx={{ fontSize: 30 }}
+                            />
+                        }
                     />
                 </Link>
             </BottomNavigation>

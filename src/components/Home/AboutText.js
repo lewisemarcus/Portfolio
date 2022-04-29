@@ -25,7 +25,7 @@ const AboutText = () => {
                             <Avatar
                                 alt="Marcus Lewis"
                                 src="/static/images/avatar/ProfilePic.jpg"
-                                sx={{ width: 100, height: 100 }}
+                                sx={{ width: 110, height: 110 }}
                             />
                         </div>
 
