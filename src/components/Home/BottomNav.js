@@ -38,23 +38,49 @@ const BottomNav = () => {
                     setValue(newValue)
                 }}
             >
-                <BottomNavigationAction label="Phone" icon={<PhoneIcon />} />
+                <Link color="inherit" href="tel:+9493224186">
+                    <BottomNavigationAction
+                        label="Phone"
+                        icon={<PhoneIcon />}
+                    />
+                </Link>
 
-                <BottomNavigationAction label="Email" icon={<EmailIcon />} />
-                <BottomNavigationAction
-                    label="LinkedIn"
-                    icon={<LinkedInIcon />}
-                />
-                <BottomNavigationAction label="Github" icon={<GitHubIcon />} />
-                {/* Footer */}
-                <Box
-                    sx={{ bgcolor: "background.paper", p: 3 }}
-                    component="footer"
+                <Link color="inherit" href="mailto: lewisemarcus@gmail.com">
+                    <BottomNavigationAction
+                        label="Email"
+                        icon={<EmailIcon />}
+                    />
+                </Link>
+
+                <Link
+                    color="inherit"
+                    href="https://www.linkedin.com/in/marcus-e-lewis/"
+                    target="_blank"
+                    rel="noopener"
                 >
-                    <Copyright />
-                </Box>
-                {/* End footer */}
+                    <BottomNavigationAction
+                        label="LinkedIn"
+                        icon={<LinkedInIcon />}
+                    />
+                </Link>
+
+                <Link
+                    color="inherit"
+                    href="https://github.com/lewisemarcus"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <BottomNavigationAction
+                        label="Github"
+                        icon={<GitHubIcon />}
+                    />
+                </Link>
             </BottomNavigation>
+            {/* Footer */}
+            <Box sx={{ bgcolor: "background.paper", pb: 1 }} component="footer">
+                <Copyright />
+            </Box>
+            {/* End footer */}
         </Paper>
     )
 }

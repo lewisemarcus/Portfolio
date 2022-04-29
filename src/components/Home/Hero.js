@@ -7,6 +7,7 @@ import Box from "@mui/material/Box"
 import Fade from "@mui/material/Fade"
 import Grow from "@mui/material/Grow"
 import Slide from "@mui/material/Slide"
+import Link from "@mui/material/Link"
 
 const Hero = () => {
     return (
@@ -32,6 +33,7 @@ const Hero = () => {
                             align="center"
                             color="text.primary"
                             gutterBottom
+                            sx={{ fontWeight: "bold" }}
                         >
                             Marcus Lewis
                         </Typography>
@@ -44,13 +46,14 @@ const Hero = () => {
                             align="center"
                             color="text.secondary"
                             paragraph
+                            sx={{ fontWeight: "bold" }}
                         >
                             Welcome to my portfolio.
                         </Typography>
                     </div>
                 </Slide>
 
-                <Grow in={true} timeout={3000}>
+                <Grow in={true} timeout={2000}>
                     <div>
                         <Stack
                             sx={{ pt: 3 }}
@@ -59,7 +62,14 @@ const Hero = () => {
                             justifyContent="center"
                         >
                             <Button variant="contained">Projects</Button>
-                            <Button variant="contained">Resume</Button>
+                            <Link
+                                color="inherit"
+                                href="https://my.indeed.com/api/3/profile/files/resume/mostRecent"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <Button variant="contained">Resume</Button>
+                            </Link>
                         </Stack>
                     </div>
                 </Grow>

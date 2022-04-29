@@ -1,7 +1,6 @@
 import * as React from "react"
 import Container from "@mui/material/Container"
-import Hero from "./Hero"
-import BottomNav from "./BottomNav"
+import { Hero, BottomNav, AboutText } from "./index"
 import Fade from "@mui/material/Fade"
 import ParticleEffect from "./Particles"
 
@@ -16,6 +15,7 @@ const Home = () => {
             <Fade in={true} timeout={2000}>
                 <div style={heroStyle}>
                     <Hero />
+                    <AboutText />
                     <BottomNav />
                 </div>
             </Fade>
