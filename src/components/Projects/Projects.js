@@ -13,6 +13,7 @@ import Box from "@mui/material/Box"
 import useScrollTrigger from "@mui/material/useScrollTrigger"
 import Fab from "@mui/material/Fab"
 import ProjectCards from "./SmallProjects/ProjectCards"
+import { Link as ReactLink } from "react-router-dom"
 function ScrollTop(props) {
     const { children, window } = props
     // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -54,56 +55,58 @@ const cardStyle = {
 }
 const Projects = (props) => {
     return (
-        <React.Fragment>
-            <div id="back-to-top-anchor"></div>
-            <ParticleEffect />
+        <ReactLink to="Projects">
+            <React.Fragment>
+                <div id="back-to-top-anchor"></div>
+                <ParticleEffect />
 
-            <div style={cardStyle}>
-                <Grow in={true} timeout={2000}>
-                    <Stack
-                        sx={{ pt: 3, mb: 3 }}
-                        direction="row"
-                        spacing={1}
-                        justifyContent="center"
+                <div style={cardStyle}>
+                    <Grow in={true} timeout={2000}>
+                        <Stack
+                            sx={{ pt: 3, mb: 3 }}
+                            direction="row"
+                            spacing={1}
+                            justifyContent="center"
+                        >
+                            <Link color="inherit" href="/">
+                                <Button variant="contained">
+                                    <HomeIcon />
+                                </Button>
+                            </Link>
+
+                            <Link color="inherit" href="/Resume">
+                                <Button variant="contained">Resume</Button>
+                            </Link>
+                        </Stack>
+                    </Grow>
+                    <div
+                        style={{
+                            display: "flex",
+                            flexWrap: "wrap",
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }}
                     >
-                        <Link color="inherit" href="/">
-                            <Button variant="contained">
-                                <HomeIcon />
-                            </Button>
-                        </Link>
+                        <div>
+                            <LargeCard />
+                        </div>
 
-                        <Link color="inherit" href="/Resume">
-                            <Button variant="contained">Resume</Button>
-                        </Link>
-                    </Stack>
-                </Grow>
-                <div
-                    style={{
-                        display: "flex",
-                        flexWrap: "wrap",
-                        justifyContent: "center",
-                        alignItems: "center",
-                    }}
-                >
-                    <div>
-                        <LargeCard />
-                    </div>
-
-                    <div>
-                        <ProjectCards />
+                        <div>
+                            <ProjectCards />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <ScrollTop {...props}>
-                <Fab
-                    className={"scrollTop"}
-                    size="small"
-                    aria-label="scroll back to top"
-                >
-                    <KeyboardArrowUpIcon />
-                </Fab>
-            </ScrollTop>
-        </React.Fragment>
+                <ScrollTop {...props}>
+                    <Fab
+                        className={"scrollTop"}
+                        size="small"
+                        aria-label="scroll back to top"
+                    >
+                        <KeyboardArrowUpIcon />
+                    </Fab>
+                </ScrollTop>
+            </React.Fragment>
+        </ReactLink>
     )
 }
 
