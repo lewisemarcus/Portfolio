@@ -24,9 +24,10 @@ const SkillsCard = () => {
                                     flexWrap: "wrap",
                                 }}
                             >
-                                {Skills.map((skillList) => {
+                                {Skills.map((skillList, index) => {
                                     return (
                                         <div
+                                            key={index}
                                             style={{
                                                 paddingLeft: "5%",
                                                 paddingRight: "5%",
@@ -42,9 +43,13 @@ const SkillsCard = () => {
                                                 <div>
                                                     <ul>
                                                         {skillList.skills.map(
-                                                            (skill) => {
+                                                            (skill, index) => {
                                                                 return (
-                                                                    <li>
+                                                                    <li
+                                                                        key={
+                                                                            index
+                                                                        }
+                                                                    >
                                                                         {skill}
                                                                     </li>
                                                                 )

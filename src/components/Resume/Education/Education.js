@@ -13,3 +13,5 @@ const English = {
 }
 
 const Education = [FullStack, English]
+
+export default Education

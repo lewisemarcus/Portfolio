@@ -20,9 +20,9 @@ const card = (
                     Work History
                 </Typography>
                 <Container>
-                    {WorkHistory.map((job) => {
+                    {WorkHistory.map((job, index) => {
                         return (
-                            <div>
+                            <div key={index}>
                                 <Typography
                                     sx={{ fontSize: 16 }}
                                     color="text.secondary"
@@ -49,8 +49,8 @@ const card = (
 
                                 <Typography variant="body2">
                                     <ul>
-                                        {job.tasks.map((task) => {
-                                            return <li>{task}</li>
+                                        {job.tasks.map((task, index) => {
+                                            return <li key={index}>{task}</li>
                                         })}
                                     </ul>
 

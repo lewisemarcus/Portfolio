@@ -26,9 +26,10 @@ const ReferenceCard = () => {
                                     justifyContent: "center",
                                 }}
                             >
-                                {References.map((reference) => {
+                                {References.map((reference, index) => {
                                     return (
                                         <div
+                                            key={index}
                                             style={{
                                                 width: "48%",
                                                 marginRight: "10px",

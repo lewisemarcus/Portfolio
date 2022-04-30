@@ -8,4 +8,13 @@ import HeaderCard from "./Header/HeaderCard"
 
 import ReferenceCard from "./References/ReferenceCard"
 
-export { WorkExpCard, SkillsCard, SummaryCard, HeaderCard, ReferenceCard }
+import EducationCard from "./Education/EducationCard"
+
+export {
+    WorkExpCard,
+    SkillsCard,
+    SummaryCard,
+    HeaderCard,
+    ReferenceCard,
+    EducationCard,
+}

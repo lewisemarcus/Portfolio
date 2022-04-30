@@ -6,68 +6,133 @@ import {
     SummaryCard,
     HeaderCard,
     ReferenceCard,
+    EducationCard,
 } from "./index"
 import ParticleEffect from "./Particles"
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
+import Zoom from "@mui/material/Zoom"
 import Slide from "@mui/material/Slide"
+import Box from "@mui/material/Box"
+import useScrollTrigger from "@mui/material/useScrollTrigger"
+import Fab from "@mui/material/Fab"
+import "./Resume.css"
 
 const cardStyle = {
     position: "relative",
     zIndex: "0 !important",
 }
 
-const Resume = () => {
-    return (
-        <Container>
-            <ParticleEffect />
-            <div style={cardStyle}>
-                <Slide direction="up" in={true} timeout={1000}>
-                    <div>
-                        <HeaderCard />
-                    </div>
-                </Slide>
+function ScrollTop(props) {
+    const { children, window } = props
+    // Note that you normally won't need to set the window ref as useScrollTrigger
+    // will default to window.
+    // This is only being set here because the demo is in an iframe.
+    const trigger = useScrollTrigger({
+        target: window ? window() : undefined,
+        disableHysteresis: true,
+        threshold: 100,
+    })
 
-                <Slide
-                    direction="up"
-                    in={true}
-                    timeout={1000}
-                    style={{ transitionDelay: 250 }}
+    const handleClick = (event) => {
+        const anchor = (event.target.ownerDocument || document).querySelector(
+            "#back-to-top-anchor",
+        )
+        if (anchor) {
+            anchor.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+            })
+        }
+    }
+
+    return (
+        <Zoom in={trigger}>
+            <Box
+                onClick={handleClick}
+                role="presentation"
+                sx={{ position: "fixed", bottom: 16, right: 16 }}
+            >
+                {children}
+            </Box>
+        </Zoom>
+    )
+}
+
+const Resume = (props) => {
+    return (
+        <React.Fragment>
+            <div id="back-to-top-anchor"></div>
+            <Container>
+                <ParticleEffect />
+                <div style={cardStyle}>
+                    <Slide direction="up" in={true} timeout={1000}>
+                        <div>
+                            <HeaderCard />
+                        </div>
+                    </Slide>
+
+                    <Slide
+                        direction="up"
+                        in={true}
+                        timeout={1000}
+                        style={{ transitionDelay: 250 }}
+                    >
+                        <div>
+                            <SummaryCard />
+                        </div>
+                    </Slide>
+                    <Slide
+                        direction="up"
+                        in={true}
+                        timeout={1000}
+                        style={{ transitionDelay: 500 }}
+                    >
+                        <div>
+                            <SkillsCard />
+                        </div>
+                    </Slide>
+                    <Slide
+                        direction="up"
+                        in={true}
+                        timeout={1000}
+                        style={{ transitionDelay: 750 }}
+                    >
+                        <div>
+                            <WorkExpCard />
+                        </div>
+                    </Slide>
+                    <Slide
+                        direction="up"
+                        in={true}
+                        timeout={1000}
+                        style={{ transitionDelay: 1000 }}
+                    >
+                        <div>
+                            <EducationCard />
+                        </div>
+                    </Slide>
+                    <Slide
+                        direction="up"
+                        in={true}
+                        timeout={1000}
+                        style={{ transitionDelay: 1250 }}
+                    >
+                        <div>
+                            <ReferenceCard />
+                        </div>
+                    </Slide>
+                </div>
+            </Container>
+            <ScrollTop {...props}>
+                <Fab
+                    className={"scrollTop"}
+                    size="small"
+                    aria-label="scroll back to top"
                 >
-                    <div>
-                        <SummaryCard />
-                    </div>
-                </Slide>
-                <Slide
-                    direction="up"
-                    in={true}
-                    timeout={1000}
-                    style={{ transitionDelay: 500 }}
-                >
-                    <div>
-                        <SkillsCard />
-                    </div>
-                </Slide>
-                <Slide
-                    direction="up"
-                    in={true}
-                    timeout={1000}
-                    style={{ transitionDelay: 750 }}
-                >
-                    <div>
-                        <WorkExpCard />
-                    </div>
-                </Slide>
-                <Slide
-                    direction="up"
-                    in={true}
-                    timeout={1000}
-                    style={{ transitionDelay: 1000 }}
-                >
-                    <div>
-                        <ReferenceCard />
-                    </div>
-                </Slide>
-            </div>
-        </Container>
+                    <KeyboardArrowUpIcon />
+                </Fab>
+            </ScrollTop>
+        </React.Fragment>
     )
 }
 
