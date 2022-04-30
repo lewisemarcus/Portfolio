@@ -8,7 +8,7 @@ When adjusting the viewport of the webpage, the webpage should react responsivel
 
 ## Sections
 
-All links in each section should be functional and bring you to its corresponding value.
+All links in each section should be functional and bring you to the correct page.
 
 ## Installation
 
