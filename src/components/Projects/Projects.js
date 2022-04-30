@@ -1,38 +1,110 @@
 import * as React from "react"
 import Container from "@mui/material/Container"
-import Typography from "@mui/material/Typography"
+import ParticleEffect from "./Particles"
+import LargeCard from "./LargeProject/LargeProjCard"
+import Link from "@mui/material/Link"
+import Stack from "@mui/material/Stack"
 import Button from "@mui/material/Button"
-import Card from "@mui/material/Card"
-import Paper from "@mui/material/Paper"
-import CardActions from "@mui/material/CardActions"
-import CardContent from "@mui/material/CardContent"
-import CardMedia from "@mui/material/CardMedia"
-
-const Project = () => {
+import HomeIcon from "@mui/icons-material/Home"
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
+import Zoom from "@mui/material/Zoom"
+import Grow from "@mui/material/Grow"
+import Box from "@mui/material/Box"
+import useScrollTrigger from "@mui/material/useScrollTrigger"
+import Fab from "@mui/material/Fab"
+import ProjectCards from "./SmallProjects/ProjectCards"
+function ScrollTop(props) {
+    const { children, window } = props
+    // Note that you normally won't need to set the window ref as useScrollTrigger
+    // will default to window.
+    // This is only being set here because the demo is in an iframe.
+    const trigger = useScrollTrigger({
+        target: window ? window() : undefined,
+        disableHysteresis: true,
+        threshold: 100,
+    })
     return (
-        <Card sx={{ maxWidth: 345 }}>
-            <CardMedia
-                component="img"
-                height="140"
-                image="/static/images/cards/contemplative-reptile.jpg"
-                alt="green iguana"
-            />
-            <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                    Lizard
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                    Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica
-                </Typography>
-            </CardContent>
-            <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
-            </CardActions>
-        </Card>
+        <Zoom in={trigger}>
+            <Box
+                onClick={handleClick}
+                role="presentation"
+                sx={{ position: "fixed", bottom: 16, right: 16 }}
+            >
+                {children}
+            </Box>
+        </Zoom>
     )
 }
 
-export default Project
+const handleClick = (event) => {
+    const anchor = (event.target.ownerDocument || document).querySelector(
+        "#back-to-top-anchor",
+    )
+    if (anchor) {
+        anchor.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+        })
+    }
+}
+
+const cardStyle = {
+    position: "relative",
+    zIndex: "0 !important",
+}
+const Projects = (props) => {
+    return (
+        <React.Fragment>
+            <div id="back-to-top-anchor"></div>
+            <ParticleEffect />
+
+            <div style={cardStyle}>
+                <Grow in={true} timeout={2000}>
+                    <Stack
+                        sx={{ pt: 3, mb: 3 }}
+                        direction="row"
+                        spacing={1}
+                        justifyContent="center"
+                    >
+                        <Link color="inherit" href="/">
+                            <Button variant="contained">
+                                <HomeIcon />
+                            </Button>
+                        </Link>
+
+                        <Link color="inherit" href="/Resume">
+                            <Button variant="contained">Resume</Button>
+                        </Link>
+                    </Stack>
+                </Grow>
+                <div
+                    style={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        justifyContent: "center",
+                        alignItems: "center",
+                    }}
+                >
+                    <div>
+                        <LargeCard />
+                    </div>
+
+                    <div>
+                        <ProjectCards />
+                    </div>
+                </div>
+            </div>
+            <ScrollTop {...props}>
+                <Fab
+                    className={"scrollTop"}
+                    size="small"
+                    aria-label="scroll back to top"
+                >
+                    <KeyboardArrowUpIcon />
+                </Fab>
+            </ScrollTop>
+        </React.Fragment>
+    )
+}
+
+export default Projects

@@ -8,6 +8,7 @@ import Button from "@mui/material/Button"
 import Link from "@mui/material/Link"
 import HomeIcon from "@mui/icons-material/Home"
 import Header from "./Header"
+import Grow from "@mui/material/Grow"
 const HeaderCard = () => {
     return (
         <Box sx={{ minWidth: 275 }}>
@@ -22,24 +23,25 @@ const HeaderCard = () => {
                                     justifyContent: "space-between",
                                 }}
                             >
-                                <Stack
-                                    sx={{ pt: 3, mb: 2 }}
-                                    direction="row"
-                                    spacing={1}
-                                >
-                                    <Link color="inherit" href="/">
-                                        <Button variant="contained">
-                                            <HomeIcon />
-                                        </Button>
-                                    </Link>
+                                <Grow in={true} timeout={2000}>
+                                    <Stack
+                                        sx={{ pt: 3, mb: 2 }}
+                                        direction="row"
+                                        spacing={1}
+                                    >
+                                        <Link color="inherit" href="/">
+                                            <Button variant="contained">
+                                                <HomeIcon />
+                                            </Button>
+                                        </Link>
 
-                                    <Link color="inherit" href="/Projects">
-                                        <Button variant="contained">
-                                            Projects
-                                        </Button>
-                                    </Link>
-                                </Stack>
-
+                                        <Link color="inherit" href="/Projects">
+                                            <Button variant="contained">
+                                                Projects
+                                            </Button>
+                                        </Link>
+                                    </Stack>
+                                </Grow>
                                 <Typography
                                     variant="h5"
                                     component="div"
