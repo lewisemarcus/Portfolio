@@ -39,6 +39,7 @@ const HeaderCard = () => {
                                         <ReactLink
                                             color="inherit"
                                             to="/Projects"
+                                            style={{ textDecoration: "none" }}
                                         >
                                             <Button variant="contained">
                                                 Projects

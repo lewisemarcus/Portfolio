@@ -62,11 +62,19 @@ const Hero = () => {
                             spacing={2}
                             justifyContent="center"
                         >
-                            <ReactLink color="inherit" to="/Projects">
+                            <ReactLink
+                                color="inherit"
+                                to="/Projects"
+                                style={{ textDecoration: "none" }}
+                            >
                                 <Button variant="contained">Projects</Button>
                             </ReactLink>
 
-                            <ReactLink color="inherit" to="/Resume">
+                            <ReactLink
+                                color="inherit"
+                                to="/Resume"
+                                style={{ textDecoration: "none" }}
+                            >
                                 <Button variant="contained">Resume</Button>
                             </ReactLink>
                         </Stack>

@@ -71,7 +71,11 @@ const Projects = (props) => {
                             </Button>
                         </ReactLink>
 
-                        <ReactLink color="inherit" to="/Resume">
+                        <ReactLink
+                            color="inherit"
+                            to="/Resume"
+                            style={{ textDecoration: "none" }}
+                        >
                             <Button variant="contained">Resume</Button>
                         </ReactLink>
                     </Stack>
