@@ -46,9 +46,7 @@ const BottomNav = () => {
                             <PhoneIcon
                                 className={"MyButton"}
                                 sx={{ fontSize: 30 }}
-                                onClick={(e) =>
-                                    window.open("tel:+9493224186", "_blank")
-                                }
+                                onClick={(e) => window.open("tel:+9493224186")}
                             />
                         }
                     />
@@ -62,10 +60,7 @@ const BottomNav = () => {
                                 className={"MyButton"}
                                 sx={{ fontSize: 30 }}
                                 onClick={(e) =>
-                                    window.open(
-                                        "mailto:lewisemarcus@gmail.com",
-                                        "_blank",
-                                    )
+                                    window.open("mailto:lewisemarcus@gmail.com")
                                 }
                             />
                         }
