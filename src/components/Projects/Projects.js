@@ -92,7 +92,7 @@ const Projects = (props) => {
                         <LargeCard />
                     </div>
 
-                    <div>
+                    <div style={{ paddingBottom: "50px" }}>
                         <ProjectCards />
                     </div>
                 </div>
