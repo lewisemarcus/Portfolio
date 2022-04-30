@@ -62,85 +62,80 @@ function ScrollTop(props) {
 
 const Resume = (props) => {
     return (
-        <ReactLink
-            to="/Resume"
-            style={{ textDecoration: "none", cursor: "default" }}
-        >
-            <React.Fragment>
-                <div id="back-to-top-anchor"></div>
-                <Container>
-                    <ParticleEffect />
-                    <div style={cardStyle}>
-                        <Slide direction="up" in={true} timeout={1000}>
-                            <div>
-                                <HeaderCard />
-                            </div>
-                        </Slide>
+        <React.Fragment>
+            <div id="back-to-top-anchor"></div>
+            <Container>
+                <ParticleEffect />
+                <div style={cardStyle}>
+                    <Slide direction="up" in={true} timeout={1000}>
+                        <div>
+                            <HeaderCard />
+                        </div>
+                    </Slide>
 
-                        <Slide
-                            direction="up"
-                            in={true}
-                            timeout={1000}
-                            style={{ transitionDelay: 250 }}
-                        >
-                            <div>
-                                <SummaryCard />
-                            </div>
-                        </Slide>
-                        <Slide
-                            direction="up"
-                            in={true}
-                            timeout={1000}
-                            style={{ transitionDelay: 500 }}
-                        >
-                            <div>
-                                <SkillsCard />
-                            </div>
-                        </Slide>
-                        <Slide
-                            direction="up"
-                            in={true}
-                            timeout={1000}
-                            style={{ transitionDelay: 750 }}
-                        >
-                            <div>
-                                <WorkExpCard />
-                            </div>
-                        </Slide>
-                        <Slide
-                            direction="up"
-                            in={true}
-                            timeout={1000}
-                            style={{ transitionDelay: 1000 }}
-                        >
-                            <div>
-                                <EducationCard />
-                            </div>
-                        </Slide>
-                        <Slide
-                            direction="up"
-                            in={true}
-                            timeout={1000}
-                            style={{ transitionDelay: 1250 }}
-                        >
-                            <div style={{ marginBottom: "100px" }}>
-                                <ReferenceCard />
-                            </div>
-                        </Slide>
-                        <BottomNav />
-                    </div>
-                </Container>
-                <ScrollTop {...props}>
-                    <Fab
-                        className={"scrollTop"}
-                        size="small"
-                        aria-label="scroll back to top"
+                    <Slide
+                        direction="up"
+                        in={true}
+                        timeout={1000}
+                        style={{ transitionDelay: 250 }}
                     >
-                        <KeyboardArrowUpIcon />
-                    </Fab>
-                </ScrollTop>
-            </React.Fragment>
-        </ReactLink>
+                        <div>
+                            <SummaryCard />
+                        </div>
+                    </Slide>
+                    <Slide
+                        direction="up"
+                        in={true}
+                        timeout={1000}
+                        style={{ transitionDelay: 500 }}
+                    >
+                        <div>
+                            <SkillsCard />
+                        </div>
+                    </Slide>
+                    <Slide
+                        direction="up"
+                        in={true}
+                        timeout={1000}
+                        style={{ transitionDelay: 750 }}
+                    >
+                        <div>
+                            <WorkExpCard />
+                        </div>
+                    </Slide>
+                    <Slide
+                        direction="up"
+                        in={true}
+                        timeout={1000}
+                        style={{ transitionDelay: 1000 }}
+                    >
+                        <div>
+                            <EducationCard />
+                        </div>
+                    </Slide>
+                    <Slide
+                        direction="up"
+                        in={true}
+                        timeout={1000}
+                        style={{ transitionDelay: 1250 }}
+                    >
+                        <div style={{ marginBottom: "100px" }}>
+                            <ReferenceCard />
+                        </div>
+                    </Slide>
+                    <BottomNav />
+                </div>
+            </Container>
+            <ScrollTop {...props}>
+                <Fab
+                    className={"scrollTop"}
+                    size="small"
+                    aria-label="scroll back to top"
+                >
+                    <KeyboardArrowUpIcon />
+                </Fab>
+            </ScrollTop>
+        </React.Fragment>
     )
 }
 

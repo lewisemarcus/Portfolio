@@ -53,21 +53,16 @@ const Home = (props) => {
     return (
         <React.Fragment>
             <div id="back-to-top-anchor"></div>
-            <ReactLink
-                to="/"
-                style={{ textDecoration: "none", cursor: "default" }}
-            >
-                <Container>
-                    <ParticleEffect />
-                    <Fade in={true} timeout={2000}>
-                        <div style={heroStyle}>
-                            <Hero />
-                            <AboutText />
-                            <BottomNav />
-                        </div>
-                    </Fade>
-                </Container>
-            </ReactLink>
+            <Container>
+                <ParticleEffect />
+                <Fade in={true} timeout={2000}>
+                    <div style={heroStyle}>
+                        <Hero />
+                        <AboutText />
+                        <BottomNav />
+                    </div>
+                </Fade>
+            </Container>
             <ScrollTop {...props}>
                 <Fab
                     className={"scrollTop"}
