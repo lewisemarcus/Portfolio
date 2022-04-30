@@ -65,12 +65,7 @@ const Hero = () => {
                                 <Button variant="contained">Projects</Button>
                             </Link>
 
-                            <Link
-                                color="inherit"
-                                href="/Resume"
-                                target="_blank"
-                                rel="noopener"
-                            >
+                            <Link color="inherit" href="/Resume">
                                 <Button variant="contained">Resume</Button>
                             </Link>
                         </Stack>

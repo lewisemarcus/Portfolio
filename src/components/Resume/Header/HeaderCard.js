@@ -33,12 +33,7 @@ const HeaderCard = () => {
                                         </Button>
                                     </Link>
 
-                                    <Link
-                                        color="inherit"
-                                        href="/Projects"
-                                        target="_blank"
-                                        rel="noopener"
-                                    >
+                                    <Link color="inherit" href="/Projects">
                                         <Button variant="contained">
                                             Projects
                                         </Button>
