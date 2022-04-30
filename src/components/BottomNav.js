@@ -35,6 +35,7 @@ const BottomNav = () => {
             <BottomNavigation
                 showLabels
                 value={value}
+                sx={{ maxHeight: 33 }}
                 onChange={(event, newValue) => {
                     setValue(newValue)
                 }}
@@ -42,6 +43,7 @@ const BottomNav = () => {
                 <a color="inherit" href="tel:+9493224186">
                     <BottomNavigationAction
                         label="Phone"
+                        sx={{ pt: 0.5 }}
                         icon={
                             <PhoneIcon
                                 className={"MyButton"}
@@ -55,6 +57,7 @@ const BottomNav = () => {
                 <Link color="inherit" href="mailto: lewisemarcus@gmail.com">
                     <BottomNavigationAction
                         label="Email"
+                        sx={{ pt: 0.5 }}
                         icon={
                             <EmailIcon
                                 className={"MyButton"}
@@ -75,6 +78,7 @@ const BottomNav = () => {
                 >
                     <BottomNavigationAction
                         label="LinkedIn"
+                        sx={{ pt: 0.5 }}
                         icon={
                             <LinkedInIcon
                                 className={"MyButton"}
@@ -98,6 +102,7 @@ const BottomNav = () => {
                 >
                     <BottomNavigationAction
                         label="Github"
+                        sx={{ pt: 0.5 }}
                         icon={
                             <GitHubIcon
                                 className={"MyButton"}
@@ -114,7 +119,10 @@ const BottomNav = () => {
                 </Link>
             </BottomNavigation>
             {/* Footer */}
-            <Box sx={{ bgcolor: "background.paper", pb: 1 }} component="footer">
+            <Box
+                sx={{ bgcolor: "background.paper", pb: 0.5, pt: 0.2 }}
+                component="footer"
+            >
                 <Copyright />
             </Box>
             {/* End footer */}
