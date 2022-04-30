@@ -9,7 +9,6 @@ When adjusting the viewport of the webpage, the webpage should react responsivel
 ## Sections
 
 All links in each section should be functional and bring you to its corresponding value.
-There are three main sections of the body, the 'About Me', 'Group Projects', and 'Solo Projects'.
 
 ## Installation
 
