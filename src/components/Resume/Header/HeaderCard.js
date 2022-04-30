@@ -9,6 +9,7 @@ import Link from "@mui/material/Link"
 import HomeIcon from "@mui/icons-material/Home"
 import Header from "./Header"
 import Grow from "@mui/material/Grow"
+import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf"
 const HeaderCard = () => {
     return (
         <Box sx={{ minWidth: 275 }}>
@@ -38,6 +39,17 @@ const HeaderCard = () => {
                                         <Link color="inherit" href="/Projects">
                                             <Button variant="contained">
                                                 Projects
+                                            </Button>
+                                        </Link>
+
+                                        <Link
+                                            color="inherit"
+                                            href="https://drive.google.com/file/d/1Sh-d-dsmh9nYObVO6nvmw6-waHzEeoRL/view?usp=sharing"
+                                            target="_blank"
+                                            rel="noopener"
+                                        >
+                                            <Button variant="contained">
+                                                <PictureAsPdfIcon />
                                             </Button>
                                         </Link>
                                     </Stack>
