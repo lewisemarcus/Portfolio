@@ -5,7 +5,6 @@ import CardContent from "@mui/material/CardContent"
 import Typography from "@mui/material/Typography"
 import Stack from "@mui/material/Stack"
 import Button from "@mui/material/Button"
-import Link from "@mui/material/Link"
 import HomeIcon from "@mui/icons-material/Home"
 import Header from "./Header"
 import Grow from "@mui/material/Grow"
@@ -46,16 +45,17 @@ const HeaderCard = () => {
                                             </Button>
                                         </ReactLink>
 
-                                        <Link
-                                            color="inherit"
-                                            href="https://drive.google.com/file/d/1Sh-d-dsmh9nYObVO6nvmw6-waHzEeoRL/view?usp=sharing"
-                                            target="_blank"
-                                            rel="noopener"
+                                        <Button
+                                            variant="contained"
+                                            onClick={(e) =>
+                                                window.open(
+                                                    "https://drive.google.com/file/d/1Sh-d-dsmh9nYObVO6nvmw6-waHzEeoRL/view?usp=sharing",
+                                                    "_blank",
+                                                )
+                                            }
                                         >
-                                            <Button variant="contained">
-                                                <PictureAsPdfIcon />
-                                            </Button>
-                                        </Link>
+                                            <PictureAsPdfIcon />
+                                        </Button>
                                     </Stack>
                                 </Grow>
                                 <Typography
