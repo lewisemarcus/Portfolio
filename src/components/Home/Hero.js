@@ -8,6 +8,7 @@ import Fade from "@mui/material/Fade"
 import Grow from "@mui/material/Grow"
 import Slide from "@mui/material/Slide"
 import Link from "@mui/material/Link"
+import { Link as ReactLink } from "react-router-dom"
 
 const Hero = () => {
     return (
@@ -61,13 +62,13 @@ const Hero = () => {
                             spacing={2}
                             justifyContent="center"
                         >
-                            <Link color="inherit" href="/Projects">
+                            <ReactLink color="inherit" to="/Projects">
                                 <Button variant="contained">Projects</Button>
-                            </Link>
+                            </ReactLink>
 
-                            <Link color="inherit" href="/Resume">
+                            <ReactLink color="inherit" to="/Resume">
                                 <Button variant="contained">Resume</Button>
-                            </Link>
+                            </ReactLink>
                         </Stack>
                     </div>
                 </Grow>

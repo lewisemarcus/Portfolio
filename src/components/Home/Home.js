@@ -10,7 +10,7 @@ const Home = () => {
         zIndex: "0 !important",
     }
     return (
-        <ReactLink to="/">
+        <ReactLink to="/" style={{ textDecoration: "none", cursor: "default" }}>
             <Container>
                 <ParticleEffect />
                 <Fade in={true} timeout={2000}>

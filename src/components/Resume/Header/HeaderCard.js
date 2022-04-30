@@ -9,6 +9,7 @@ import Link from "@mui/material/Link"
 import HomeIcon from "@mui/icons-material/Home"
 import Header from "./Header"
 import Grow from "@mui/material/Grow"
+import { Link as ReactLink } from "react-router-dom"
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf"
 const HeaderCard = () => {
     return (
@@ -30,17 +31,20 @@ const HeaderCard = () => {
                                         direction="row"
                                         spacing={1}
                                     >
-                                        <Link color="inherit" href="/">
+                                        <ReactLink color="inherit" to="/">
                                             <Button variant="contained">
                                                 <HomeIcon />
                                             </Button>
-                                        </Link>
+                                        </ReactLink>
 
-                                        <Link color="inherit" href="/Projects">
+                                        <ReactLink
+                                            color="inherit"
+                                            to="/Projects"
+                                        >
                                             <Button variant="contained">
                                                 Projects
                                             </Button>
-                                        </Link>
+                                        </ReactLink>
 
                                         <Link
                                             color="inherit"

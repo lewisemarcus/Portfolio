@@ -1,8 +1,6 @@
 import * as React from "react"
-import Container from "@mui/material/Container"
 import ParticleEffect from "./Particles"
 import LargeCard from "./LargeProject/LargeProjCard"
-import Link from "@mui/material/Link"
 import Stack from "@mui/material/Stack"
 import Button from "@mui/material/Button"
 import HomeIcon from "@mui/icons-material/Home"
@@ -55,58 +53,56 @@ const cardStyle = {
 }
 const Projects = (props) => {
     return (
-        <ReactLink to="Projects">
-            <React.Fragment>
-                <div id="back-to-top-anchor"></div>
-                <ParticleEffect />
+        <React.Fragment>
+            <div id="back-to-top-anchor"></div>
+            <ParticleEffect />
 
-                <div style={cardStyle}>
-                    <Grow in={true} timeout={2000}>
-                        <Stack
-                            sx={{ pt: 3, mb: 3 }}
-                            direction="row"
-                            spacing={1}
-                            justifyContent="center"
-                        >
-                            <Link color="inherit" href="/">
-                                <Button variant="contained">
-                                    <HomeIcon />
-                                </Button>
-                            </Link>
-
-                            <Link color="inherit" href="/Resume">
-                                <Button variant="contained">Resume</Button>
-                            </Link>
-                        </Stack>
-                    </Grow>
-                    <div
-                        style={{
-                            display: "flex",
-                            flexWrap: "wrap",
-                            justifyContent: "center",
-                            alignItems: "center",
-                        }}
+            <div style={cardStyle}>
+                <Grow in={true} timeout={2000}>
+                    <Stack
+                        sx={{ pt: 3, mb: 3 }}
+                        direction="row"
+                        spacing={1}
+                        justifyContent="center"
                     >
-                        <div>
-                            <LargeCard />
-                        </div>
+                        <ReactLink color="inherit" to="/">
+                            <Button variant="contained">
+                                <HomeIcon />
+                            </Button>
+                        </ReactLink>
 
-                        <div>
-                            <ProjectCards />
-                        </div>
+                        <ReactLink color="inherit" to="/Resume">
+                            <Button variant="contained">Resume</Button>
+                        </ReactLink>
+                    </Stack>
+                </Grow>
+                <div
+                    style={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        justifyContent: "center",
+                        alignItems: "center",
+                    }}
+                >
+                    <div>
+                        <LargeCard />
+                    </div>
+
+                    <div>
+                        <ProjectCards />
                     </div>
                 </div>
-                <ScrollTop {...props}>
-                    <Fab
-                        className={"scrollTop"}
-                        size="small"
-                        aria-label="scroll back to top"
-                    >
-                        <KeyboardArrowUpIcon />
-                    </Fab>
-                </ScrollTop>
-            </React.Fragment>
-        </ReactLink>
+            </div>
+            <ScrollTop {...props}>
+                <Fab
+                    className={"scrollTop"}
+                    size="small"
+                    aria-label="scroll back to top"
+                >
+                    <KeyboardArrowUpIcon />
+                </Fab>
+            </ScrollTop>
+        </React.Fragment>
     )
 }
 

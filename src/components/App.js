@@ -1,16 +1,16 @@
 import React from "react"
-import { HashRouter as Router, Route, Routes } from "react-router-dom"
+import { HashRouter, Route, Routes } from "react-router-dom"
 
 import { Home, Projects, Resume } from "./index"
 function App() {
     return (
-        <Router>
+        <HashRouter>
             <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/Projects" element={<Projects />}></Route>
-                <Route path="/Resume" element={<Resume />}></Route>
+                <Route exact path="/" element={<Home />}></Route>
+                <Route exact path="/Projects" element={<Projects />}></Route>
+                <Route exact path="/Resume" element={<Resume />}></Route>
             </Routes>
-        </Router>
+        </HashRouter>
     )
 }
 

@@ -61,7 +61,10 @@ function ScrollTop(props) {
 
 const Resume = (props) => {
     return (
-        <ReactLink to="/Resume">
+        <ReactLink
+            to="/Resume"
+            style={{ textDecoration: "none", cursor: "default" }}
+        >
             <React.Fragment>
                 <div id="back-to-top-anchor"></div>
                 <Container>
