@@ -58,7 +58,7 @@ const Projects = (props) => {
             <ParticleEffect />
 
             <div style={cardStyle}>
-                <Grow in={true} timeout={2000}>
+                <Zoom in={true} timeout={2000}>
                     <Stack
                         sx={{ pt: 3, mb: 3 }}
                         direction="row"
@@ -79,7 +79,7 @@ const Projects = (props) => {
                             <Button variant="contained">Resume</Button>
                         </ReactLink>
                     </Stack>
-                </Grow>
+                </Zoom>
                 <div
                     style={{
                         display: "flex",
