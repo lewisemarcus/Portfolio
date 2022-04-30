@@ -10,6 +10,7 @@ import Box from "@mui/material/Box"
 import useScrollTrigger from "@mui/material/useScrollTrigger"
 import Fab from "@mui/material/Fab"
 import { Link as ReactLink } from "react-router-dom"
+import BasicSpeedDial from "../SpeedDial"
 
 function ScrollTop(props) {
     const { children, window } = props
@@ -59,7 +60,7 @@ const Projects = (props) => {
             <div style={cardStyle}>
                 <Zoom in={true} timeout={2000}>
                     <Stack
-                        sx={{ pt: 3, mb: 3 }}
+                        sx={{ pt: 1, mb: 3 }}
                         direction="row"
                         spacing={1}
                         justifyContent="center"
@@ -90,10 +91,9 @@ const Projects = (props) => {
                         <LargeCard />
                     </div>
 
-                    <div style={{ paddingBottom: "100px" }}>
+                    <div style={{ paddingBottom: "10px" }}>
                         <ProjectCards />
                     </div>
-                    <BottomNav />
                 </div>
             </div>
             <ScrollTop {...props}>
@@ -105,6 +105,7 @@ const Projects = (props) => {
                     <KeyboardArrowUpIcon />
                 </Fab>
             </ScrollTop>
+            <BasicSpeedDial className={"SpeedDial"} />
         </React.Fragment>
     )
 }

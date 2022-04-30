@@ -48,7 +48,7 @@ const BottomNav = () => {
                             <PhoneIcon
                                 className={"MyButton"}
                                 sx={{ fontSize: 30 }}
-                                onClick={(e) => window.open("tel:+9493224186")}
+                                onClick={() => window.open("tel:+9493224186")}
                             />
                         }
                     />

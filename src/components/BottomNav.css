@@ -1,8 +1,10 @@
+.MyButton {
+    transition: all 0.25s linear !important;
+    -webkit-transition: all 0.25s linear !important;
+    -moz-transition: all 0.25s linear !important;
+    -o-transition: all 0.25s linear !important;
+}
 .MyButton:hover {
     color: #1565c0;
     font-size: 275%;
-    transition: all 0.25s linear;
-    -webkit-transition: all 0.25s linear;
-    -moz-transition: all 0.25s linear;
-    -o-transition: all 0.25s linear;
 }

@@ -18,6 +18,7 @@ import { Link as ReactLink } from "react-router-dom"
 import useScrollTrigger from "@mui/material/useScrollTrigger"
 import Fab from "@mui/material/Fab"
 import "./Resume.css"
+import BasicSpeedDial from "../SpeedDial"
 
 const cardStyle = {
     position: "relative",
@@ -123,7 +124,6 @@ const Resume = (props) => {
                             <ReferenceCard />
                         </div>
                     </Slide>
-                    <BottomNav />
                 </div>
             </Container>
             <ScrollTop {...props}>
@@ -135,6 +135,7 @@ const Resume = (props) => {
                     <KeyboardArrowUpIcon />
                 </Fab>
             </ScrollTop>
+            <BasicSpeedDial className={"SpeedDial"} />
         </React.Fragment>
     )
 }

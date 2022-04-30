@@ -10,6 +10,8 @@ import { ProjectList } from "../ProjectList"
 import "./ProjectCards.css"
 
 const ProjectCards = () => {
+    const [width, setWidth] = React.useState(0)
+
     return (
         <div
             style={{
@@ -21,7 +23,7 @@ const ProjectCards = () => {
         >
             {ProjectList.map((project, index) => {
                 return (
-                    <div key={index}>
+                    <div id={index} key={index}>
                         <Grow
                             in={true}
                             timeout={2000}
@@ -29,15 +31,12 @@ const ProjectCards = () => {
                                 transitionDelay: project.delay,
                             }}
                         >
-                            <Card
-                                sx={{ maxWidth: 300, mb: 1 }}
-                                className={"MyCard"}
-                            >
+                            <Card sx={{ mb: 1 }} className={"MyCard"}>
                                 <CardMedia
                                     component="img"
                                     height="140"
                                     image={project.image}
-                                    alt="green iguana"
+                                    alt={project.title}
                                     style={{ objectFit: "fill" }}
                                 />
                                 <CardContent sx={{ p: 0, pr: 2, pl: 2 }}>

@@ -6,12 +6,13 @@ import { BugZapper } from "../ProjectList"
 import CardActions from "@mui/material/CardActions"
 import CardContent from "@mui/material/CardContent"
 import CardMedia from "@mui/material/CardMedia"
+import "./LargeProjCard.css"
 import Fade from "@mui/material/Fade"
 
 const LargeCard = () => {
     return (
         <Fade in={true} timeout={2000}>
-            <Card sx={{ maxWidth: 800, mb: 3 }}>
+            <Card sx={{ maxWidth: 800, mb: 3 }} className={"LargeCard"}>
                 <CardMedia
                     component="img"
                     height="448"

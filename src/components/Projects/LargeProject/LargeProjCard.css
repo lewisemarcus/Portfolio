@@ -1,12 +1,12 @@
-.MyCard {
-    max-width: 300px;
-    height: 370px;
+.LargeCard {
+    max-width: 800px;
+    height: 700px;
     transition: all 0.25s linear !important;
     -webkit-transition: all 0.25s linear !important;
     -moz-transition: all 0.25s linear !important;
     -o-transition: all 0.25s linear !important;
 }
-.MyCard:hover {
-    max-width: 350px;
-    height: 400px;
+.LargeCard:hover {
+    max-width: 850px;
+    height: 750px;
 }
