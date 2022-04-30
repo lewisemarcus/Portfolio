@@ -8,6 +8,7 @@ import {
     ReferenceCard,
 } from "./index"
 import ParticleEffect from "./Particles"
+import Slide from "@mui/material/Slide"
 
 const cardStyle = {
     position: "relative",
@@ -19,11 +20,52 @@ const Resume = () => {
         <Container>
             <ParticleEffect />
             <div style={cardStyle}>
-                <HeaderCard />
-                <SummaryCard />
-                <SkillsCard />
-                <WorkExpCard />
-                <ReferenceCard />
+                <Slide direction="up" in={true} timeout={1000}>
+                    <div>
+                        <HeaderCard />
+                    </div>
+                </Slide>
+
+                <Slide
+                    direction="up"
+                    in={true}
+                    timeout={1000}
+                    style={{ transitionDelay: 250 }}
+                >
+                    <div>
+                        <SummaryCard />
+                    </div>
+                </Slide>
+                <Slide
+                    direction="up"
+                    in={true}
+                    timeout={1000}
+                    style={{ transitionDelay: 500 }}
+                >
+                    <div>
+                        <SkillsCard />
+                    </div>
+                </Slide>
+                <Slide
+                    direction="up"
+                    in={true}
+                    timeout={1000}
+                    style={{ transitionDelay: 750 }}
+                >
+                    <div>
+                        <WorkExpCard />
+                    </div>
+                </Slide>
+                <Slide
+                    direction="up"
+                    in={true}
+                    timeout={1000}
+                    style={{ transitionDelay: 1000 }}
+                >
+                    <div>
+                        <ReferenceCard />
+                    </div>
+                </Slide>
             </div>
         </Container>
     )
