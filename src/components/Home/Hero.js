@@ -61,10 +61,13 @@ const Hero = () => {
                             spacing={2}
                             justifyContent="center"
                         >
-                            <Button variant="contained">Projects</Button>
+                            <Link color="inherit" href="/Projects">
+                                <Button variant="contained">Projects</Button>
+                            </Link>
+
                             <Link
                                 color="inherit"
-                                href="https://my.indeed.com/api/3/profile/files/resume/mostRecent"
+                                href="/Resume"
                                 target="_blank"
                                 rel="noopener"
                             >

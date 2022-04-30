@@ -35,8 +35,8 @@ const AboutText = () => {
                                 textAlign: "center",
                                 fontWeight: "bold",
                                 color: "text.secondary",
-
                                 p: 1,
+                                pb: 10,
                                 borderRadius: 10,
                             }}
                         >

@@ -2,4 +2,6 @@ import Home from "./Home/Home"
 
 import Project from "./Projects/Projects"
 
-export { Home, Project }
+import Resume from "./Resume/Resume"
+
+export { Home, Project, Resume }
