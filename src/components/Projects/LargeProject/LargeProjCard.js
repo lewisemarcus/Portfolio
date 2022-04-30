@@ -17,7 +17,7 @@ const LargeCard = () => {
                     height="448"
                     image={BugZapper.image}
                     alt="Bug Tracker"
-                    style={{ objectFit: "contain" }}
+                    style={{ objectFit: "cover" }}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
