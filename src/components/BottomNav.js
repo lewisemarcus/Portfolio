@@ -39,17 +39,20 @@ const BottomNav = () => {
                     setValue(newValue)
                 }}
             >
-                <Link color="inherit" href="tel:+9493224186">
+                <a color="inherit" href="tel:+9493224186">
                     <BottomNavigationAction
                         label="Phone"
                         icon={
                             <PhoneIcon
                                 className={"MyButton"}
                                 sx={{ fontSize: 30 }}
+                                onClick={(e) =>
+                                    window.open("tel:+9493224186", "_blank")
+                                }
                             />
                         }
                     />
-                </Link>
+                </a>
 
                 <Link color="inherit" href="mailto: lewisemarcus@gmail.com">
                     <BottomNavigationAction
@@ -58,6 +61,12 @@ const BottomNav = () => {
                             <EmailIcon
                                 className={"MyButton"}
                                 sx={{ fontSize: 30 }}
+                                onClick={(e) =>
+                                    window.open(
+                                        "mailto:lewisemarcus@gmail.com",
+                                        "_blank",
+                                    )
+                                }
                             />
                         }
                     />
@@ -75,6 +84,12 @@ const BottomNav = () => {
                             <LinkedInIcon
                                 className={"MyButton"}
                                 sx={{ fontSize: 30 }}
+                                onClick={(e) =>
+                                    window.open(
+                                        "https://www.linkedin.com/in/marcus-e-lewis/",
+                                        "_blank",
+                                    )
+                                }
                             />
                         }
                     />
@@ -92,6 +107,12 @@ const BottomNav = () => {
                             <GitHubIcon
                                 className={"MyButton"}
                                 sx={{ fontSize: 30 }}
+                                onClick={(e) =>
+                                    window.open(
+                                        "https://github.com/lewisemarcus",
+                                        "_blank",
+                                    )
+                                }
                             />
                         }
                     />

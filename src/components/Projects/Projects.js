@@ -1,17 +1,16 @@
 import * as React from "react"
 import ParticleEffect from "./Particles"
-import LargeCard from "./LargeProject/LargeProjCard"
+import { ProjectCards, BottomNav, LargeCard } from "./index"
 import Stack from "@mui/material/Stack"
 import Button from "@mui/material/Button"
 import HomeIcon from "@mui/icons-material/Home"
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
 import Zoom from "@mui/material/Zoom"
-import Grow from "@mui/material/Grow"
 import Box from "@mui/material/Box"
 import useScrollTrigger from "@mui/material/useScrollTrigger"
 import Fab from "@mui/material/Fab"
-import ProjectCards from "./SmallProjects/ProjectCards"
 import { Link as ReactLink } from "react-router-dom"
+
 function ScrollTop(props) {
     const { children, window } = props
     // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -85,16 +84,16 @@ const Projects = (props) => {
                         display: "flex",
                         flexWrap: "wrap",
                         justifyContent: "center",
-                        alignItems: "center",
                     }}
                 >
                     <div>
                         <LargeCard />
                     </div>
 
-                    <div style={{ paddingBottom: "50px" }}>
+                    <div style={{ paddingBottom: "100px" }}>
                         <ProjectCards />
                     </div>
+                    <BottomNav />
                 </div>
             </div>
             <ScrollTop {...props}>

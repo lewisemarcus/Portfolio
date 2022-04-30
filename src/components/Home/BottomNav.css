@@ -1,7 +1,0 @@
-.MyButton:hover {
-    color: #1565c0;
-    font-size: 275%;
-    transition-property: font-size;
-    transition-duration: 0.25s;
-    transition-timing-function: linear !important;
-}

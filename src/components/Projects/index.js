@@ -1,3 +1,7 @@
 import ProjectCards from "./SmallProjects/ProjectCards"
 
-export { ProjectCards }
+import LargeCard from "./LargeProject/LargeProjCard"
+
+import BottomNav from "../BottomNav"
+
+export { ProjectCards, BottomNav, LargeCard }

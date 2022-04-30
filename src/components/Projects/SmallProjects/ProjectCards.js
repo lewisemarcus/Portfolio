@@ -7,6 +7,7 @@ import CardContent from "@mui/material/CardContent"
 import CardMedia from "@mui/material/CardMedia"
 import Grow from "@mui/material/Grow"
 import { ProjectList } from "../ProjectList"
+import "./ProjectCards.css"
 
 const ProjectCards = () => {
     return (
@@ -28,7 +29,10 @@ const ProjectCards = () => {
                                 transitionDelay: project.delay,
                             }}
                         >
-                            <Card sx={{ maxWidth: 300, mb: 1 }}>
+                            <Card
+                                sx={{ maxWidth: 300, mb: 1 }}
+                                className={"MyCard"}
+                            >
                                 <CardMedia
                                     component="img"
                                     height="140"

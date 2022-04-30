@@ -1,6 +1,6 @@
 import Hero from "./Hero"
 
-import BottomNav from "./BottomNav"
+import BottomNav from "../BottomNav"
 
 import AboutText from "./AboutText"
 

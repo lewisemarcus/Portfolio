@@ -10,6 +10,8 @@ import ReferenceCard from "./References/ReferenceCard"
 
 import EducationCard from "./Education/EducationCard"
 
+import BottomNav from "../BottomNav"
+
 export {
     WorkExpCard,
     SkillsCard,
@@ -17,4 +19,5 @@ export {
     HeaderCard,
     ReferenceCard,
     EducationCard,
+    BottomNav,
 }

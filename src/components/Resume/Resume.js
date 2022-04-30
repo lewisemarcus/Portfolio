@@ -7,6 +7,7 @@ import {
     HeaderCard,
     ReferenceCard,
     EducationCard,
+    BottomNav,
 } from "./index"
 import ParticleEffect from "./Particles"
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
@@ -122,10 +123,11 @@ const Resume = (props) => {
                             timeout={1000}
                             style={{ transitionDelay: 1250 }}
                         >
-                            <div>
+                            <div style={{ marginBottom: "100px" }}>
                                 <ReferenceCard />
                             </div>
                         </Slide>
+                        <BottomNav />
                     </div>
                 </Container>
                 <ScrollTop {...props}>
