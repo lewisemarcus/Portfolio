@@ -2,13 +2,12 @@ import * as React from "react"
 import Box from "@mui/material/Box"
 import SpeedDial from "@mui/material/SpeedDial"
 import SpeedDialAction from "@mui/material/SpeedDialAction"
-import SendIcon from "@mui/icons-material/Send"
 import PhoneIcon from "@mui/icons-material/Phone"
 import EmailIcon from "@mui/icons-material/Email"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
+import SpeedDialIcon from "@mui/material/SpeedDialIcon"
 import GitHubIcon from "@mui/icons-material/GitHub"
 import "./BottomNav.css"
-import "./SpeedDial.css"
 
 const actions = [
     {
@@ -37,12 +36,17 @@ const actions = [
 
 export default function BasicSpeedDial() {
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box
+            sx={{ flexGrow: 1 }}
+            onClick={(e) => {
+                console.log(e.target)
+            }}
+        >
             <SpeedDial
                 direction="down"
                 ariaLabel="SpeedDial"
                 sx={{ position: "fixed", top: 16, right: 16 }}
-                icon={<SendIcon />}
+                icon={<SpeedDialIcon />}
             >
                 {actions.map((action) => (
                     <SpeedDialAction

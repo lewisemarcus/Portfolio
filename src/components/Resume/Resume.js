@@ -7,14 +7,13 @@ import {
     HeaderCard,
     ReferenceCard,
     EducationCard,
-    BottomNav,
 } from "./index"
 import ParticleEffect from "./Particles"
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
 import Zoom from "@mui/material/Zoom"
 import Slide from "@mui/material/Slide"
 import Box from "@mui/material/Box"
-import { Link as ReactLink } from "react-router-dom"
+
 import useScrollTrigger from "@mui/material/useScrollTrigger"
 import Fab from "@mui/material/Fab"
 import "./Resume.css"
@@ -135,7 +134,7 @@ const Resume = (props) => {
                     <KeyboardArrowUpIcon />
                 </Fab>
             </ScrollTop>
-            <BasicSpeedDial className={"SpeedDial"} />
+            <BasicSpeedDial />
         </React.Fragment>
     )
 }
