@@ -1,10 +1,10 @@
 .LargeCard {
     max-width: 800px;
     height: 700px;
-    transition: all 0.25s linear !important;
-    -webkit-transition: all 0.25s linear !important;
-    -moz-transition: all 0.25s linear !important;
-    -o-transition: all 0.25s linear !important;
+    transition: max-width 0.25s linear, height 0.25s linear !important;
+    -webkit-transition: max-width 0.25s linear, height 0.25s linear !important;
+    -moz-transition: max-width 0.25s linear, height 0.25s linear !important;
+    -o-transition: max-width 0.25s linear, height 0.25s linear !important;
 }
 .LargeCard:hover {
     max-width: 850px;
