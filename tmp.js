@@ -82,6 +82,12 @@ const BottomNav = () => {
                             <LinkedInIcon
                                 className={"MyButton"}
                                 sx={{ fontSize: 30 }}
+                                onClick={(e) =>
+                                    window.open(
+                                        "https://www.linkedin.com/in/marcus-e-lewis/",
+                                        "_blank",
+                                    )
+                                }
                             />
                         }
                     />
@@ -100,6 +106,12 @@ const BottomNav = () => {
                             <GitHubIcon
                                 className={"MyButton"}
                                 sx={{ fontSize: 30 }}
+                                onClick={(e) =>
+                                    window.open(
+                                        "https://github.com/lewisemarcus",
+                                        "_blank",
+                                    )
+                                }
                             />
                         }
                     />
