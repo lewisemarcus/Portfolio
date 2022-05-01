@@ -31,7 +31,10 @@ const ProjectCards = () => {
                                 transitionDelay: project.delay,
                             }}
                         >
-                            <Card sx={{ mb: 1 }} className={"MyCard"}>
+                            <Card
+                                sx={{ mb: 1, maxWidth: 300, height: 370 }}
+                                className={"MyCard"}
+                            >
                                 <CardMedia
                                     component="img"
                                     height="140"
