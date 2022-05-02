@@ -58,7 +58,7 @@ const Projects = (props) => {
             <ParticleEffect />
 
             <div style={cardStyle}>
-                <Zoom in={true} timeout={2000}>
+                <Zoom in={true} timeout={1500}>
                     <Stack
                         sx={{ pt: 1, mb: 3 }}
                         direction="row"
