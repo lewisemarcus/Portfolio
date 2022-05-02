@@ -12,20 +12,6 @@ import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf"
 import MenuIcon from "@mui/icons-material/Menu"
 import "./AppBar.css"
 
-window.onload = function () {
-    if (document.getElementById("home2")) {
-        document.getElementById("home2").style.position = "absolute"
-        document.getElementById("home2").style.opacity = "0"
-        document.getElementById("home2").style.top = "-100px"
-        document.getElementById("resume").style.position = "absolute"
-        document.getElementById("resume").style.opacity = "0"
-        document.getElementById("resume").style.top = "-100px"
-        document.getElementById("menu2").style.backgroundColor =
-            "rgb(25, 118, 210)"
-        document.getElementById("menu2").style.color = "white"
-    }
-}
-
 interface Props {
     /**
      * Injected by the documentation to work in an iframe.
