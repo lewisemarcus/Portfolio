@@ -58,7 +58,10 @@ export default function ElevateAppBar(props: Props) {
             {}
             <CssBaseline />
             <ElevationScroll {...props}>
-                <AppBar id="appbar1" sx={{ backgroundColor: "transparent" }}>
+                <AppBar
+                    id="appbar1"
+                    sx={{ backgroundColor: "transparent", p: 0.5 }}
+                >
                     <Toolbar sx={{ justifyContent: "flex-start" }}>
                         <Typography variant="h6" component="div">
                             <Zoom in={true} timeout={500}>

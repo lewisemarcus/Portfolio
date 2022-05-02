@@ -59,10 +59,17 @@ export default function ElevateAppBar(props: Props) {
         <React.Fragment>
             <CssBaseline />
             <ElevationScroll {...props}>
-                <AppBar sx={{ backgroundColor: "transparent" }}>
+                <AppBar sx={{ backgroundColor: "transparent", p: 0.5 }}>
                     <Toolbar sx={{ justifyContent: "flex-start" }}>
                         <Typography variant="h6" component="div">
-                            <Stack direction="row" spacing={1}>
+                            <Stack
+                                direction="row"
+                                spacing={1}
+                                sx={{
+                                    flexWrap: "wrap",
+                                    justifyContent: "center",
+                                }}
+                            >
                                 <Button
                                     id="menu"
                                     className={"button"}
@@ -140,6 +147,7 @@ export default function ElevateAppBar(props: Props) {
                                 </ReactLink>
 
                                 <Button
+                                    sx={{ mt: 1 }}
                                     variant="contained"
                                     id="pdf"
                                     className={"pdf"}
