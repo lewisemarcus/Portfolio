@@ -45,6 +45,7 @@ export default function ElevateAppBar(props: Props) {
         document.getElementById("menu").style.backgroundColor =
             "rgb(25, 118, 210)"
         document.getElementById("menu").style.color = "white"
+        document.getElementById("menu").style.minWidth = "30px !important"
         document.getElementById("home").style.position = "absolute"
         document.getElementById("home").style.opacity = "0"
         document.getElementById("home").style.top = "-100px"
@@ -62,14 +63,12 @@ export default function ElevateAppBar(props: Props) {
                 <AppBar sx={{ backgroundColor: "transparent", p: 0.5 }}>
                     <Toolbar sx={{ justifyContent: "flex-start" }}>
                         <Typography variant="h6" component="div">
-                            <Stack
-                                direction="row"
-                                spacing={1}
-                                sx={{
-                                    flexWrap: "wrap",
-                                }}
-                            >
+                            <Stack direction="row" spacing={1}>
                                 <Button
+                                    sx={{
+                                        minWidth: "0px !important",
+                                        maxWidth: "50px !important",
+                                    }}
                                     id="menu"
                                     className={"button"}
                                     variant="contained"
@@ -123,6 +122,10 @@ export default function ElevateAppBar(props: Props) {
                                 </Button>
                                 <ReactLink color="inherit" to="/">
                                     <Button
+                                        sx={{
+                                            minWidth: "0px !important",
+                                            maxWidth: "50px !important",
+                                        }}
                                         variant="contained"
                                         id="home"
                                         className={"home"}
@@ -146,6 +149,10 @@ export default function ElevateAppBar(props: Props) {
                                 </ReactLink>
 
                                 <Button
+                                    sx={{
+                                        minWidth: "0px !important",
+                                        maxWidth: "50px !important",
+                                    }}
                                     variant="contained"
                                     id="pdf"
                                     className={"pdf"}

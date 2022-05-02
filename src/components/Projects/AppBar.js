@@ -71,6 +71,10 @@ export default function ElevateAppBar(props: Props) {
                                     spacing={1}
                                 >
                                     <Button
+                                        sx={{
+                                            minWidth: "0px !important",
+                                            maxWidth: "50px !important",
+                                        }}
                                         id="menu2"
                                         variant="contained"
                                         className={"button2"}
@@ -127,14 +131,9 @@ export default function ElevateAppBar(props: Props) {
                                     </Button>
                                     <ReactLink color="inherit" to="/">
                                         <Button
-                                            onClick={() => {
-                                                document.getElementById(
-                                                    "menu2",
-                                                ).style.backgroundColor =
-                                                    "rgb(25, 118, 210)"
-                                                document.getElementById(
-                                                    "menu2",
-                                                ).style.color = "white"
+                                            sx={{
+                                                minWidth: "0px !important",
+                                                maxWidth: "50px !important",
                                             }}
                                             variant="contained"
                                             id="home2"
@@ -150,15 +149,6 @@ export default function ElevateAppBar(props: Props) {
                                         style={{ textDecoration: "none" }}
                                     >
                                         <Button
-                                            onClick={() => {
-                                                document.getElementById(
-                                                    "menu2",
-                                                ).style.backgroundColor =
-                                                    "rgb(25, 118, 210)"
-                                                document.getElementById(
-                                                    "menu2",
-                                                ).style.color = "white"
-                                            }}
                                             variant="contained"
                                             id="resume"
                                             className={"resume"}
