@@ -34,6 +34,9 @@ function ElevationScroll(props: Props) {
 
     return React.cloneElement(children, {
         elevation: trigger ? 3 : 0,
+        style: trigger
+            ? { backgroundColor: "white" }
+            : { backgroundColor: "transparent" },
     })
 }
 
@@ -55,7 +58,7 @@ export default function ElevateAppBar(props: Props) {
             {}
             <CssBaseline />
             <ElevationScroll {...props}>
-                <AppBar sx={{ backgroundColor: "white !important" }}>
+                <AppBar id="appbar1" sx={{ backgroundColor: "transparent" }}>
                     <Toolbar sx={{ justifyContent: "flex-start" }}>
                         <Typography variant="h6" component="div">
                             <Zoom in={true} timeout={500}>
