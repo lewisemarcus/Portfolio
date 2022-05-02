@@ -40,15 +40,23 @@ const AboutText = () => {
                                 borderRadius: 10,
                             }}
                         >
-                            Hello, my name is Marcus, and welcome to my
-                            Portfolio webpage, where you will find my most
-                            recent and what I consider my best works in regard
-                            to web development. My education consists of a
-                            Bachelor's degree in English, received from the
-                            University of California, Irvine, and I have
-                            received a certificate noting my completion of the
-                            Full Stack Coding Boot Camp, also from the
-                            University of California, Irvine.
+                            About Me: I am a Full Stack Web Developer with a
+                            background in Content Analysis, denoted by my
+                            certificate in Full-Stack Development from UCI's
+                            Full-Stack Program. I am gifted in evaluating risk
+                            and loss potential and developing information for
+                            new and renewal policies. I am team-oriented with
+                            success in creating case studies and content
+                            validation. I try to be at the forefront of all
+                            projects I work on to make sure I get the experience
+                            and understand the entirety of the project,
+                            exemplified by my roles in projects and tasks I've
+                            undertaken. For each project, my goal was to immerse
+                            myself with the most "difficult" aspects of them,
+                            such as back-end development and integration. I am
+                            highly motivated and eager to grow my career as a
+                            Developer. I have a desire for industry knowledge
+                            and trends to implement further in my career.
                         </Typography>
                     </div>
                 </Zoom>
