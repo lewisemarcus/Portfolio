@@ -146,7 +146,6 @@ export default function ElevateAppBar(props: Props) {
                                 </ReactLink>
 
                                 <Button
-                                    sx={{ mt: 1 }}
                                     variant="contained"
                                     id="pdf"
                                     className={"pdf"}
