@@ -1,0 +1,13 @@
+.home2 {
+    opacity: 0;
+    transition: all 0.25s !important;
+}
+
+.resume {
+    opacity: 0;
+    transition: all 0.1s !important;
+}
+
+.button2 {
+    transition: all 0.25s !important;
+}

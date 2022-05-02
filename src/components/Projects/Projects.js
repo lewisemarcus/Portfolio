@@ -1,16 +1,13 @@
 import * as React from "react"
 import ParticleEffect from "./Particles"
-import { ProjectCards, BottomNav, LargeCard } from "./index"
-import Stack from "@mui/material/Stack"
-import Button from "@mui/material/Button"
-import HomeIcon from "@mui/icons-material/Home"
+import { ProjectCards, LargeCard } from "./index"
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
 import Zoom from "@mui/material/Zoom"
 import Box from "@mui/material/Box"
 import useScrollTrigger from "@mui/material/useScrollTrigger"
 import Fab from "@mui/material/Fab"
-import { Link as ReactLink } from "react-router-dom"
 import BasicSpeedDial from "../SpeedDial"
+import ElevateAppBar from "./AppBar"
 
 function ScrollTop(props) {
     const { children, window } = props
@@ -58,30 +55,11 @@ const Projects = (props) => {
             <ParticleEffect />
 
             <div style={cardStyle}>
-                <Zoom in={true} timeout={1500}>
-                    <Stack
-                        sx={{ pt: 1, mb: 3 }}
-                        direction="row"
-                        spacing={1}
-                        justifyContent="center"
-                    >
-                        <ReactLink color="inherit" to="/">
-                            <Button variant="contained">
-                                <HomeIcon />
-                            </Button>
-                        </ReactLink>
+                <ElevateAppBar />
 
-                        <ReactLink
-                            color="inherit"
-                            to="/Resume"
-                            style={{ textDecoration: "none" }}
-                        >
-                            <Button variant="contained">Resume</Button>
-                        </ReactLink>
-                    </Stack>
-                </Zoom>
                 <div
                     style={{
+                        marginTop: "25px",
                         display: "flex",
                         flexWrap: "wrap",
                         justifyContent: "center",

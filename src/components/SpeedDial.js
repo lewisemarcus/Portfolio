@@ -45,7 +45,7 @@ export default function BasicSpeedDial() {
             <SpeedDial
                 direction="down"
                 ariaLabel="SpeedDial"
-                sx={{ position: "fixed", top: 16, right: 10 }}
+                sx={{ position: "fixed", top: 70, right: 10 }}
                 icon={<SpeedDialIcon />}
             >
                 {actions.map((action) => (

@@ -13,7 +13,7 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
 import Zoom from "@mui/material/Zoom"
 import Slide from "@mui/material/Slide"
 import Box from "@mui/material/Box"
-
+import ElevateAppBar from "../AppBar"
 import useScrollTrigger from "@mui/material/useScrollTrigger"
 import Fab from "@mui/material/Fab"
 import "./Resume.css"
@@ -67,62 +67,65 @@ const Resume = (props) => {
             <Container>
                 <ParticleEffect />
                 <div style={cardStyle}>
-                    <Slide direction="up" in={true} timeout={1000}>
-                        <div>
-                            <HeaderCard />
-                        </div>
-                    </Slide>
+                    <ElevateAppBar />
+                    <div style={{ marginTop: "25px" }}>
+                        <Slide direction="up" in={true} timeout={1000}>
+                            <div>
+                                <HeaderCard />
+                            </div>
+                        </Slide>
 
-                    <Slide
-                        direction="up"
-                        in={true}
-                        timeout={1000}
-                        style={{ transitionDelay: 250 }}
-                    >
-                        <div>
-                            <SummaryCard />
-                        </div>
-                    </Slide>
-                    <Slide
-                        direction="up"
-                        in={true}
-                        timeout={1000}
-                        style={{ transitionDelay: 500 }}
-                    >
-                        <div>
-                            <SkillsCard />
-                        </div>
-                    </Slide>
-                    <Slide
-                        direction="up"
-                        in={true}
-                        timeout={1000}
-                        style={{ transitionDelay: 750 }}
-                    >
-                        <div>
-                            <WorkExpCard />
-                        </div>
-                    </Slide>
-                    <Slide
-                        direction="up"
-                        in={true}
-                        timeout={1000}
-                        style={{ transitionDelay: 1000 }}
-                    >
-                        <div>
-                            <EducationCard />
-                        </div>
-                    </Slide>
-                    <Slide
-                        direction="up"
-                        in={true}
-                        timeout={1000}
-                        style={{ transitionDelay: 1250 }}
-                    >
-                        <div style={{ marginBottom: "100px" }}>
-                            <ReferenceCard />
-                        </div>
-                    </Slide>
+                        <Slide
+                            direction="up"
+                            in={true}
+                            timeout={1000}
+                            style={{ transitionDelay: 250 }}
+                        >
+                            <div>
+                                <SummaryCard />
+                            </div>
+                        </Slide>
+                        <Slide
+                            direction="up"
+                            in={true}
+                            timeout={1000}
+                            style={{ transitionDelay: 500 }}
+                        >
+                            <div>
+                                <SkillsCard />
+                            </div>
+                        </Slide>
+                        <Slide
+                            direction="up"
+                            in={true}
+                            timeout={1000}
+                            style={{ transitionDelay: 750 }}
+                        >
+                            <div>
+                                <WorkExpCard />
+                            </div>
+                        </Slide>
+                        <Slide
+                            direction="up"
+                            in={true}
+                            timeout={1000}
+                            style={{ transitionDelay: 1000 }}
+                        >
+                            <div>
+                                <EducationCard />
+                            </div>
+                        </Slide>
+                        <Slide
+                            direction="up"
+                            in={true}
+                            timeout={1000}
+                            style={{ transitionDelay: 1250 }}
+                        >
+                            <div style={{ marginBottom: "100px" }}>
+                                <ReferenceCard />
+                            </div>
+                        </Slide>
+                    </div>
                 </div>
             </Container>
             <ScrollTop {...props}>
