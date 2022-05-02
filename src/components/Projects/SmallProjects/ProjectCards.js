@@ -17,8 +17,9 @@ const ProjectCards = () => {
             style={{
                 display: "flex",
                 flexWrap: "wrap",
-                maxWidth: 700,
-                justifyContent: "space-evenly",
+                justifyContent: "center",
+                flexDirection: "column",
+                alignItems: "center",
             }}
         >
             {ProjectList.map((project, index) => {
@@ -32,17 +33,20 @@ const ProjectCards = () => {
                             }}
                         >
                             <Card
-                                sx={{ mb: 1, maxWidth: 300, height: 370 }}
+                                sx={{
+                                    m: 3,
+                                    maxWidth: 600,
+                                }}
                                 className={"MyCard"}
                             >
                                 <CardMedia
                                     component="img"
-                                    height="140"
+                                    height="200"
                                     image={project.image}
                                     alt={project.title}
-                                    style={{ objectFit: "fill" }}
+                                    style={{ objectFit: "scale-down" }}
                                 />
-                                <CardContent sx={{ p: 0, pr: 2, pl: 2 }}>
+                                <CardContent sx={{ pr: 2, pl: 2, pt: 3 }}>
                                     <Typography
                                         gutterBottom
                                         variant="h5"
@@ -51,19 +55,49 @@ const ProjectCards = () => {
                                         {project.title}
                                     </Typography>
                                     <Typography
-                                        variant="body2"
+                                        variant="body1"
                                         color="text.secondary"
                                     >
                                         {project.body}
                                     </Typography>
+                                    <Typography
+                                        variant="body1"
+                                        color="text.secondary"
+                                        sx={{ pt: 3 }}
+                                    >
+                                        Technologies Used: {project.tech}
+                                    </Typography>
+                                    <Typography
+                                        variant="body1"
+                                        color="text.secondary"
+                                        sx={{ pt: 3 }}
+                                    >
+                                        Role: {project.role}
+                                    </Typography>
                                 </CardContent>
-                                <CardActions sx={{ pt: 0 }}>
-                                    <Button size="small">
-                                        <a href={project.github}>Github Link</a>
+                                <CardActions sx={{ flexWrap: "wrap" }}>
+                                    <Button size="small" sx={{ pl: 1 }}>
+                                        <a
+                                            href={project.github}
+                                            style={{ textDecoration: "none" }}
+                                        >
+                                            Github Link
+                                        </a>
                                     </Button>
-                                    <Button size="small">
-                                        <a href={project.deployed}>
+                                    <Button size="small" sx={{ pl: 0, ml: 0 }}>
+                                        <a
+                                            href={project.deployed}
+                                            style={{ textDecoration: "none" }}
+                                        >
                                             Deployed Application
+                                        </a>
+                                    </Button>
+                                    <Button size="small" sx={{ pl: 0, ml: 0 }}>
+                                        <a
+                                            href={project.contributions}
+                                            style={{ textDecoration: "none" }}
+                                        >
+                                            Contributions
                                         </a>
                                     </Button>
                                 </CardActions>

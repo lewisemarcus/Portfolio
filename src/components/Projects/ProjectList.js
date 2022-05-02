@@ -5,6 +5,10 @@ const BugZapper = {
     deployed: "bug-zapper-app.herokuapp.com/",
     image: "/static/images/cards/bugTracker.png",
     delay: 250,
+    contributions:
+        "https://github.com/lewisemarcus/bugTracker/commits?author=lewisemarcus&before=94a5aceb4ad84b78d80588bd8ba28c319bd6ecdc+35",
+    tech: "JavaScript, Express.js, Handlebars.js, MySQL, Node.js, CSS",
+    role: "RESTful API design, Database design, Front-end integration with API",
 }
 
 const PollutionMap = {
@@ -14,6 +18,10 @@ const PollutionMap = {
     deployed: "https://lewisemarcus.github.io/PollutionMap/",
     image: "/static/images/cards/pollMap.PNG",
     delay: 500,
+    contributions:
+        "https://github.com/lewisemarcus/PollutionMap/commits?author=lewisemarcus",
+    tech: "JavaScript, Bulma, OpenLayers Maps, WAQI API, IP API",
+    role: "Map Editor, Air Quality API calls, Front-end integration, Some front-end design",
 }
 
 const TechBlog = {
@@ -23,6 +31,9 @@ const TechBlog = {
     deployed: "https://agile-dawn-55678.herokuapp.com/",
     image: "/static/images/cards/techBlog.png",
     delay: 750,
+    contributions: "https://github.com/lewisemarcus/TechBlog/commits/main",
+    tech: "JavaScript, Bootstrap, Express.js, Node.js, MySQL, Handlebars.js",
+    role: "All",
 }
 
 const NoteTaker = {
@@ -32,6 +43,9 @@ const NoteTaker = {
     deployed: "https://secure-fortress-62772.herokuapp.com/",
     image: "/static/images/cards/noteTaker.png",
     delay: 1000,
+    contributions: "https://github.com/lewisemarcus/NoteTaker/commits/main",
+    tech: "JavaScript, Express.js, Node.js, MySQL, CSS",
+    role: "All",
 }
 
 const WeatherDash = {
@@ -41,6 +55,10 @@ const WeatherDash = {
     deployed: "https://lewisemarcus.github.io/WeatherDashboard/",
     image: "/static/images/cards/WeatherDash.png",
     delay: 1250,
+    contributions:
+        "https://github.com/lewisemarcus/WeatherDashboard/commits/main",
+    tech: "JavaScript, HTML, CSS, OpenWeather API",
+    role: "All",
 }
 
 const ProjectList = [PollutionMap, TechBlog, NoteTaker, WeatherDash]

@@ -12,28 +12,60 @@ import Fade from "@mui/material/Fade"
 const LargeCard = () => {
     return (
         <Fade in={true} timeout={2000}>
-            <Card sx={{ maxWidth: 800, mb: 3 }} className={"LargeCard"}>
+            <Card sx={{ mb: 3 }} className={"LargeCard"}>
                 <CardMedia
                     component="img"
-                    height="448"
+                    height="300"
                     image={BugZapper.image}
                     alt="Bug Tracker"
-                    style={{ objectFit: "cover" }}
+                    style={{ objectFit: "scale-down" }}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         {BugZapper.title}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body1" color="text.secondary">
                         {BugZapper.body}
                     </Typography>
+                    <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        sx={{ pt: 3 }}
+                    >
+                        Technologies Used: {BugZapper.tech}
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        sx={{ pt: 3 }}
+                    >
+                        Role: {BugZapper.role}
+                    </Typography>
                 </CardContent>
-                <CardActions>
-                    <Button size="small">
-                        <a href={BugZapper.github}>Github Link</a>
+                <CardActions sx={{ flexWrap: "wrap" }}>
+                    <Button size="small" sx={{ pl: 1 }}>
+                        <a
+                            href={BugZapper.github}
+                            style={{ textDecoration: "none" }}
+                        >
+                            Github Link
+                        </a>
                     </Button>
-                    <Button size="small">
-                        <a href={BugZapper.deployed}>Deployed Application</a>
+                    <Button size="small" sx={{ pl: 0, ml: 0 }}>
+                        <a
+                            href={BugZapper.deployed}
+                            style={{ textDecoration: "none" }}
+                        >
+                            Deployed Application
+                        </a>
+                    </Button>
+                    <Button size="small" sx={{ pl: 0, ml: 0 }}>
+                        <a
+                            href={BugZapper.contributions}
+                            style={{ textDecoration: "none" }}
+                        >
+                            Contributions
+                        </a>
                     </Button>
                 </CardActions>
             </Card>

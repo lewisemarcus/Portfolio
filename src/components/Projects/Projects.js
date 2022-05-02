@@ -85,6 +85,8 @@ const Projects = (props) => {
                         display: "flex",
                         flexWrap: "wrap",
                         justifyContent: "center",
+                        flexDirection: "column",
+                        alignItems: "center",
                     }}
                 >
                     <div>
