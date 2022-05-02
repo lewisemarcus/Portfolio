@@ -60,13 +60,17 @@ export default function ElevateAppBar(props: Props) {
             <ElevationScroll {...props}>
                 <AppBar
                     id="appbar1"
-                    sx={{ backgroundColor: "transparent", p: 0.5 }}
+                    sx={{ backgroundColor: "transparent", p: 0, height: 55 }}
                 >
-                    <Toolbar sx={{ justifyContent: "flex-start" }}>
+                    <Toolbar
+                        sx={{
+                            justifyContent: "flex-start",
+                        }}
+                    >
                         <Typography variant="h6" component="div">
                             <Zoom in={true} timeout={500}>
                                 <Stack
-                                    sx={{ pb: 0.5, pt: 0.5 }}
+                                    sx={{ pb: 1 }}
                                     direction="row"
                                     spacing={1}
                                 >

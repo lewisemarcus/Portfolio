@@ -59,10 +59,12 @@ export default function ElevateAppBar(props: Props) {
         <React.Fragment>
             <CssBaseline />
             <ElevationScroll {...props}>
-                <AppBar sx={{ backgroundColor: "transparent", p: 0.5 }}>
+                <AppBar
+                    sx={{ backgroundColor: "transparent", p: 0, height: 55 }}
+                >
                     <Toolbar sx={{ justifyContent: "flex-start" }}>
                         <Typography variant="h6" component="div">
-                            <Stack direction="row" spacing={1}>
+                            <Stack direction="row" spacing={1} sx={{ pb: 1 }}>
                                 <Button
                                     sx={{
                                         minWidth: "0px !important",
