@@ -45,7 +45,6 @@ export default function ElevateAppBar(props: Props) {
         document.getElementById("menu").style.backgroundColor =
             "rgb(25, 118, 210)"
         document.getElementById("menu").style.color = "white"
-        document.getElementById("menu").style.minWidth = "30px !important"
         document.getElementById("home").style.position = "absolute"
         document.getElementById("home").style.opacity = "0"
         document.getElementById("home").style.top = "-100px"
