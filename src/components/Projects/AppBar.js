@@ -69,7 +69,6 @@ export default function ElevateAppBar(props: Props) {
                                     sx={{ pb: 0.5, pt: 0.5 }}
                                     direction="row"
                                     spacing={1}
-                                    justifyContent="center"
                                 >
                                     <Button
                                         id="menu2"

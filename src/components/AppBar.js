@@ -67,7 +67,6 @@ export default function ElevateAppBar(props: Props) {
                                 spacing={1}
                                 sx={{
                                     flexWrap: "wrap",
-                                    justifyContent: "center",
                                 }}
                             >
                                 <Button
