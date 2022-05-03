@@ -29,7 +29,7 @@ const ProjectCards = () => {
         >
             {ProjectList.map((project, index) => {
                 return (
-                    <div id={index} key={index}>
+                    <div id={project.id} key={index}>
                         <Slide
                             direction="up"
                             unmountOnExit
@@ -42,6 +42,8 @@ const ProjectCards = () => {
                             <Card
                                 sx={{
                                     m: 3,
+                                    mb: 25,
+                                    mt: 25,
                                     maxWidth: 600,
                                 }}
                                 className="card"
@@ -86,7 +88,10 @@ const ProjectCards = () => {
                                     <Button size="small" sx={{ pl: 1 }}>
                                         <a
                                             href={project.github}
-                                            style={{ textDecoration: "none" }}
+                                            style={{
+                                                textDecoration: "none",
+                                                color: "rgb(25, 118, 210)",
+                                            }}
                                         >
                                             Github Link
                                         </a>
@@ -94,7 +99,10 @@ const ProjectCards = () => {
                                     <Button size="small" sx={{ pl: 0, ml: 0 }}>
                                         <a
                                             href={project.deployed}
-                                            style={{ textDecoration: "none" }}
+                                            style={{
+                                                textDecoration: "none",
+                                                color: "rgb(25, 118, 210)",
+                                            }}
                                         >
                                             Deployed Application
                                         </a>
@@ -102,7 +110,10 @@ const ProjectCards = () => {
                                     <Button size="small" sx={{ pl: 0, ml: 0 }}>
                                         <a
                                             href={project.contributions}
-                                            style={{ textDecoration: "none" }}
+                                            style={{
+                                                textDecoration: "none",
+                                                color: "rgb(25, 118, 210)",
+                                            }}
                                         >
                                             Contributions
                                         </a>

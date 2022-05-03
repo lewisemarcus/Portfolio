@@ -6,8 +6,11 @@ import CssBaseline from "@mui/material/CssBaseline"
 import useScrollTrigger from "@mui/material/useScrollTrigger"
 import Stack from "@mui/material/Stack"
 import Button from "@mui/material/Button"
+import Zoom from "@mui/material/Zoom"
 import { Link as ReactLink } from "react-router-dom"
 import HomeIcon from "@mui/icons-material/Home"
+import Menu from "@mui/material/Menu"
+import MenuItem from "@mui/material/MenuItem"
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf"
 import MenuIcon from "@mui/icons-material/Menu"
 import "./AppBar.css"
@@ -39,22 +42,28 @@ function ElevationScroll(props: Props) {
             : { backgroundColor: "transparent" },
     })
 }
-
+window.onload = () => {
+    document.getElementById("menu").style.backgroundColor = "rgb(25, 118, 210)"
+    document.getElementById("menu").style.color = "white"
+}
 export default function ElevateAppBar(props: Props) {
-    React.useEffect(() => {
-        document.getElementById("menu").style.backgroundColor =
-            "rgb(25, 118, 210)"
-        document.getElementById("menu").style.color = "white"
-        document.getElementById("home").style.position = "absolute"
-        document.getElementById("home").style.opacity = "0"
-        document.getElementById("home").style.top = "-100px"
-        document.getElementById("pdf").style.position = "absolute"
-        document.getElementById("pdf").style.opacity = "0"
-        document.getElementById("pdf").style.top = "-100px"
-        document.getElementById("projects").style.position = "absolute"
-        document.getElementById("projects").style.opacity = "0"
-        document.getElementById("projects").style.top = "-100px"
-    })
+    const [anchorEl, setAnchorEl] = React.useState(null)
+    const open = Boolean(anchorEl)
+    const handleClick = (event) => {
+        const button = event.currentTarget
+        button.style.backgroundColor = "white"
+        button.style.color = "rgb(25, 118, 210)"
+
+        setAnchorEl(event.currentTarget)
+    }
+    const handleClose = () => {
+        const button = document.getElementById("menu")
+        button.style.backgroundColor = "rgb(25, 118, 210)"
+        button.style.color = "white"
+
+        setAnchorEl(null)
+    }
+
     return (
         <React.Fragment>
             <CssBaseline />
@@ -73,84 +82,73 @@ export default function ElevateAppBar(props: Props) {
                                     id="menu"
                                     className={"button"}
                                     variant="contained"
-                                    onClick={() => {
-                                        const button =
-                                            document.getElementById("menu")
-
-                                        button.style.backgroundColor =
-                                            button.style.backgroundColor ===
-                                            "rgb(25, 118, 210)"
-                                                ? "white"
-                                                : "rgb(25, 118, 210)"
-                                        button.style.color =
-                                            button.style.color ===
-                                            "rgb(25, 118, 210)"
-                                                ? "white"
-                                                : "rgb(25, 118, 210)"
-                                        const projects =
-                                            document.getElementById("projects")
-                                        const home =
-                                            document.getElementById("home")
-                                        const pdf =
-                                            document.getElementById("pdf")
-
-                                        for (let each of [
-                                            home,
-                                            pdf,
-                                            projects,
-                                        ]) {
-                                            each.style.opacity =
-                                                each.style.opacity === "0"
-                                                    ? "1"
-                                                    : "0"
-                                            setTimeout(function () {
-                                                each.style.position =
-                                                    each.style.position ===
-                                                    "absolute"
-                                                        ? "relative"
-                                                        : "absolute"
-                                                each.style.top =
-                                                    each.style.top === "-100px"
-                                                        ? "0"
-                                                        : "-100px"
-                                            }, 250)
-                                        }
+                                    onClick={(event) => {
+                                        handleClick(event)
                                     }}
                                 >
                                     <MenuIcon />
                                 </Button>
-                                <ReactLink color="inherit" to="/">
-                                    <Button
-                                        sx={{
-                                            minWidth: "0px !important",
-                                            maxWidth: "50px !important",
-                                        }}
-                                        variant="contained"
+                            </Stack>
+                            <Menu
+                                id="fade-menu"
+                                MenuListProps={{
+                                    "aria-labelledby": "menu",
+                                }}
+                                anchorEl={anchorEl}
+                                open={open}
+                                onClose={handleClose}
+                                TransitionComponent={Zoom}
+                            >
+                                <ReactLink
+                                    color="inherit"
+                                    to="/"
+                                    style={{
+                                        textDecoration: "none",
+                                        color: "rgb(25, 118, 210)",
+                                    }}
+                                >
+                                    <MenuItem
+                                        onClick={handleClose}
                                         id="home"
-                                        className={"home"}
+                                        style={{
+                                            padding: 10,
+                                            justifyContent: "center",
+                                        }}
                                     >
-                                        <HomeIcon />
-                                    </Button>
+                                        <HomeIcon
+                                            className={"home"}
+                                            sx={{
+                                                color: "rgb(25, 118, 210)",
+                                            }}
+                                        />
+                                    </MenuItem>
                                 </ReactLink>
-
                                 <ReactLink
                                     color="inherit"
                                     to="/Projects"
                                     style={{ textDecoration: "none" }}
                                 >
-                                    <Button
+                                    <MenuItem
                                         id="projects"
                                         variant="contained"
                                         className={"projects"}
+                                        style={{
+                                            color: "rgb(25, 118, 210)",
+                                            fontWeight: "bolder",
+                                            textDecoration: "none",
+                                            padding: 10,
+                                            justifyContent: "center",
+                                        }}
                                     >
                                         Projects
-                                    </Button>
+                                    </MenuItem>
                                 </ReactLink>
 
-                                <Button
-                                    sx={{
-                                        minWidth: "0px !important",
-                                        maxWidth: "50px !important",
+                                <MenuItem
+                                    style={{
+                                        padding: 10,
+                                        justifyContent: "center",
+                                        color: "rgb(25, 118, 210)",
                                     }}
                                     variant="contained"
                                     id="pdf"
@@ -163,8 +161,8 @@ export default function ElevateAppBar(props: Props) {
                                     }}
                                 >
                                     <PictureAsPdfIcon />
-                                </Button>
-                            </Stack>
+                                </MenuItem>
+                            </Menu>
                         </Typography>
                     </Toolbar>
                 </AppBar>
