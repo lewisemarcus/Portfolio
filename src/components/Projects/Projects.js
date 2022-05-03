@@ -49,6 +49,9 @@ const cardStyle = {
     zIndex: "0 !important",
 }
 const Projects = (props) => {
+    React.useEffect(() => {
+        window.scrollTo(0, 0)
+    })
     return (
         <React.Fragment>
             <div id="back-to-top-anchor"></div>
