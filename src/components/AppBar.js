@@ -73,22 +73,28 @@ export default function ElevateAppBar(props: Props) {
                 >
                     <Toolbar sx={{ justifyContent: "flex-start" }}>
                         <Typography variant="h6" component="div">
-                            <Stack direction="row" spacing={1} sx={{ pb: 1 }}>
-                                <Button
-                                    sx={{
-                                        minWidth: "0px !important",
-                                        maxWidth: "50px !important",
-                                    }}
-                                    id="menu"
-                                    className={"button"}
-                                    variant="contained"
-                                    onClick={(event) => {
-                                        handleClick(event)
-                                    }}
+                            <Zoom in={true} timeout={500} unmountOnExit>
+                                <Stack
+                                    direction="row"
+                                    spacing={1}
+                                    sx={{ pb: 1 }}
                                 >
-                                    <MenuIcon />
-                                </Button>
-                            </Stack>
+                                    <Button
+                                        sx={{
+                                            minWidth: "0px !important",
+                                            maxWidth: "50px !important",
+                                        }}
+                                        id="menu"
+                                        className={"button"}
+                                        variant="contained"
+                                        onClick={(event) => {
+                                            handleClick(event)
+                                        }}
+                                    >
+                                        <MenuIcon />
+                                    </Button>
+                                </Stack>
+                            </Zoom>
                             <Menu
                                 id="fade-menu"
                                 MenuListProps={{

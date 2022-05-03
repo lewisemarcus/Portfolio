@@ -91,93 +91,117 @@ export default function ElevateAppBar(props: Props) {
                     >
                         <Typography variant="h6" component="div">
                             <Zoom in={true} timeout={500} unmountOnExit>
-                                <div>
-                                    <Stack
-                                        sx={{ pb: 1 }}
-                                        direction="row"
-                                        spacing={1}
-                                    >
-                                        <Button
-                                            aria-controls={
-                                                open ? "fade-menu" : undefined
-                                            }
-                                            aria-haspopup="true"
-                                            aria-expanded={
-                                                open ? "true" : undefined
-                                            }
-                                            sx={{
-                                                minWidth: "0px !important",
-                                                maxWidth: "50px !important",
-                                            }}
-                                            id="menu2"
-                                            variant="contained"
-                                            className={"button2"}
-                                            onClick={(event) => {
-                                                handleClick(event)
-                                            }}
-                                        >
-                                            <MenuIcon />
-                                        </Button>
-                                    </Stack>
-                                    <Menu
-                                        id="fade-menu"
-                                        MenuListProps={{
-                                            "aria-labelledby": "menu2",
+                                <Stack
+                                    sx={{ pb: 1 }}
+                                    direction="row"
+                                    spacing={1}
+                                >
+                                    <Button
+                                        aria-controls={
+                                            open ? "fade-menu" : undefined
+                                        }
+                                        aria-haspopup="true"
+                                        aria-expanded={
+                                            open ? "true" : undefined
+                                        }
+                                        sx={{
+                                            minWidth: "0px !important",
+                                            maxWidth: "50px !important",
                                         }}
-                                        anchorEl={anchorEl}
-                                        open={open}
-                                        onClose={handleClose}
-                                        TransitionComponent={Zoom}
+                                        id="menu2"
+                                        variant="contained"
+                                        className={"button2"}
+                                        onClick={(event) => {
+                                            handleClick(event)
+                                        }}
                                     >
-                                        <ReactLink
-                                            color="inherit"
-                                            to="/"
-                                            style={{
-                                                textDecoration: "none",
+                                        <MenuIcon />
+                                    </Button>
+                                </Stack>
+                            </Zoom>
+                            <Menu
+                                id="fade-menu"
+                                MenuListProps={{
+                                    "aria-labelledby": "menu2",
+                                }}
+                                anchorEl={anchorEl}
+                                open={open}
+                                onClose={handleClose}
+                                TransitionComponent={Zoom}
+                            >
+                                <ReactLink
+                                    color="inherit"
+                                    to="/"
+                                    style={{
+                                        textDecoration: "none",
+                                        color: "rgb(25, 118, 210)",
+                                    }}
+                                >
+                                    <MenuItem
+                                        onClick={handleClose}
+                                        id="home2"
+                                        sx={{
+                                            justifyContent: "center",
+                                        }}
+                                    >
+                                        <HomeIcon
+                                            className={"home2"}
+                                            sx={{
                                                 color: "rgb(25, 118, 210)",
                                             }}
-                                        >
-                                            <MenuItem
-                                                onClick={handleClose}
-                                                id="home2"
-                                                sx={{
-                                                    justifyContent: "center",
-                                                }}
-                                            >
-                                                <HomeIcon
-                                                    className={"home2"}
-                                                    sx={{
-                                                        color: "rgb(25, 118, 210)",
-                                                    }}
-                                                />
-                                            </MenuItem>
-                                        </ReactLink>
-                                        <ReactLink
-                                            color="inherit"
-                                            to="/Resume"
-                                            style={{
-                                                textDecoration: "none",
-                                                color: "rgb(25, 118, 210)",
-                                            }}
-                                        >
-                                            <MenuItem
-                                                onClick={handleClose}
-                                                className={"home2"}
-                                                sx={{
-                                                    color: "rgb(25, 118, 210)",
-                                                    fontWeight: "bolder",
-                                                    textDecoration: "none",
-                                                    padding: 1,
-                                                    justifyContent: "center",
-                                                }}
-                                            >
-                                                Resume
-                                            </MenuItem>
-                                        </ReactLink>
+                                        />
+                                    </MenuItem>
+                                </ReactLink>
+                                <ReactLink
+                                    color="inherit"
+                                    to="/Resume"
+                                    style={{
+                                        textDecoration: "none",
+                                        color: "rgb(25, 118, 210)",
+                                    }}
+                                >
+                                    <MenuItem
+                                        onClick={handleClose}
+                                        className={"home2"}
+                                        sx={{
+                                            color: "rgb(25, 118, 210)",
+                                            fontWeight: "bolder",
+                                            textDecoration: "none",
+                                            padding: 1,
+                                            justifyContent: "center",
+                                        }}
+                                    >
+                                        Resume
+                                    </MenuItem>
+                                </ReactLink>
+                                <HashLink
+                                    scroll={(el) => scrollBugZapper(el)}
+                                    smooth
+                                    to={BugZapper.href}
+                                    style={{
+                                        textDecoration: "none",
+                                    }}
+                                >
+                                    <MenuItem
+                                        onClick={handleClose}
+                                        style={{
+                                            color: "rgb(25, 118, 210)",
+                                            fontWeight: "bolder",
+                                            textDecoration: "none",
+                                            padding: 10,
+                                            justifyContent: "center",
+                                        }}
+                                    >
+                                        {BugZapper.short}
+                                    </MenuItem>
+                                </HashLink>
+                                {ProjectList.map((project, index) => {
+                                    return (
                                         <HashLink
-                                            scroll={(el) => scrollBugZapper(el)}
+                                            scroll={(el) => scrollProjects(el)}
+                                            key={index}
                                             smooth
-                                            to={BugZapper.href}
+                                            to={project.href}
                                             style={{
                                                 textDecoration: "none",
                                             }}
@@ -192,43 +216,12 @@ export default function ElevateAppBar(props: Props) {
                                                     justifyContent: "center",
                                                 }}
                                             >
-                                                {BugZapper.short}
+                                                {project.short}
                                             </MenuItem>
                                         </HashLink>
-                                        {ProjectList.map((project, index) => {
-                                            return (
-                                                <HashLink
-                                                    scroll={(el) =>
-                                                        scrollProjects(el)
-                                                    }
-                                                    key={index}
-                                                    smooth
-                                                    to={project.href}
-                                                    style={{
-                                                        textDecoration: "none",
-                                                    }}
-                                                >
-                                                    <MenuItem
-                                                        onClick={handleClose}
-                                                        style={{
-                                                            color: "rgb(25, 118, 210)",
-                                                            fontWeight:
-                                                                "bolder",
-                                                            textDecoration:
-                                                                "none",
-                                                            padding: 10,
-                                                            justifyContent:
-                                                                "center",
-                                                        }}
-                                                    >
-                                                        {project.short}
-                                                    </MenuItem>
-                                                </HashLink>
-                                            )
-                                        })}
-                                    </Menu>
-                                </div>
-                            </Zoom>
+                                    )
+                                })}
+                            </Menu>
                         </Typography>
                     </Toolbar>
                 </AppBar>
