@@ -5,13 +5,18 @@ import Card from "@mui/material/Card"
 import CardActions from "@mui/material/CardActions"
 import CardContent from "@mui/material/CardContent"
 import CardMedia from "@mui/material/CardMedia"
-import Grow from "@mui/material/Grow"
+import Slide from "@mui/material/Slide"
 import { ProjectList } from "../ProjectList"
 import "./ProjectCards.css"
 
 const ProjectCards = () => {
-    const [width, setWidth] = React.useState(0)
-
+    React.useEffect(() => {
+        setTimeout(function () {
+            for (let each of document.getElementsByClassName("card")) {
+                each.classList.add("MyCard")
+            }
+        }, 1250)
+    })
     return (
         <div
             style={{
@@ -25,9 +30,9 @@ const ProjectCards = () => {
             {ProjectList.map((project, index) => {
                 return (
                     <div id={index} key={index}>
-                        <Grow
+                        <Slide
                             in={true}
-                            timeout={2000}
+                            timeout={1500}
                             style={{
                                 transitionDelay: project.delay,
                             }}
@@ -37,7 +42,7 @@ const ProjectCards = () => {
                                     m: 3,
                                     maxWidth: 600,
                                 }}
-                                className={"MyCard"}
+                                className="card"
                             >
                                 <CardMedia
                                     component="img"
@@ -102,7 +107,7 @@ const ProjectCards = () => {
                                     </Button>
                                 </CardActions>
                             </Card>
-                        </Grow>
+                        </Slide>
                     </div>
                 )
             })}

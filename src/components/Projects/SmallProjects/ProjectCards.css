@@ -1,10 +1,10 @@
 .MyCard {
     background-color: #fdfdfd !important;
-    transition: max-width 0.25s linear, height 0.25s linear !important;
+    transition: max-width 0.1s linear !important;
     opacity: 2000ms cubic-bezier(0.4, 0, 0.2, 1) 500ms,
         transform 1332ms cubic-bezier(0.4, 0, 0.2, 1) 500ms !important;
-    transition-property: opacity, transform, max-width, height, background-color !important;
-    transition-duration: 1000ms, 750ms !important;
+    transition-property: opacity, transform, max-width, background-color !important;
+    transition-duration: 1000ms, 750ms, 150ms, 150ms !important;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1),
         cubic-bezier(0.4, 0, 0.2, 1) !important;
 }

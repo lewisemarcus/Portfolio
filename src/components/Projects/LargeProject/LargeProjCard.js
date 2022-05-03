@@ -7,12 +7,17 @@ import CardActions from "@mui/material/CardActions"
 import CardContent from "@mui/material/CardContent"
 import CardMedia from "@mui/material/CardMedia"
 import "./LargeProjCard.css"
-import Fade from "@mui/material/Fade"
+import Slide from "@mui/material/Slide"
 
 const LargeCard = () => {
+    React.useEffect(() => {
+        setTimeout(function () {
+            document.getElementById("largeCard").classList.add("LargeCard")
+        }, 1000)
+    })
     return (
-        <Fade in={true} timeout={2000}>
-            <Card sx={{ mb: 3 }} className={"LargeCard"}>
+        <Slide direction="down" in={true} timeout={1000}>
+            <Card id="largeCard" sx={{ mb: 3, maxWidth: 800 }}>
                 <CardMedia
                     component="img"
                     height="300"
@@ -69,7 +74,7 @@ const LargeCard = () => {
                     </Button>
                 </CardActions>
             </Card>
-        </Fade>
+        </Slide>
     )
 }
 
