@@ -72,7 +72,7 @@ export default function ElevateAppBar(props: Props) {
     }
     const scrollProjects = (el) => {
         const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset
-        const yOffset = 80
+        const yOffset = 130
         window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" })
     }
 
