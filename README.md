@@ -17,7 +17,7 @@ No installation required.
 Link to Website: https://marcuslewis.dev/
 
 Built with React and MUI
-![Photo of Website](https://imgur.com/a/82F1tYV)
+![Photo of Website](https://imgur.com/a/X3OHcbf)
 
 # Credits
 
