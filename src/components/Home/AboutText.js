@@ -10,6 +10,7 @@ const AboutText = () => {
         <Box>
             <Container>
                 <Zoom
+                    unmountOnExit
                     in={true}
                     timeout={1000}
                     style={{ transitionDelay: "750ms" }}

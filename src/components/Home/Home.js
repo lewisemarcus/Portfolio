@@ -6,10 +6,8 @@ import useScrollTrigger from "@mui/material/useScrollTrigger"
 import Fab from "@mui/material/Fab"
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
 import Zoom from "@mui/material/Zoom"
-import Grow from "@mui/material/Grow"
 import Box from "@mui/material/Box"
 import ParticleEffect from "./Particles"
-import { Link as ReactLink } from "react-router-dom"
 
 function ScrollTop(props) {
     const { children, window } = props
@@ -22,7 +20,7 @@ function ScrollTop(props) {
         threshold: 100,
     })
     return (
-        <Zoom in={trigger}>
+        <Zoom unmountOnExit in={trigger}>
             <Box
                 onClick={handleClick}
                 role="presentation"
@@ -55,7 +53,7 @@ const Home = (props) => {
             <div id="back-to-top-anchor"></div>
             <Container>
                 <ParticleEffect />
-                <Fade in={true} timeout={2000}>
+                <Fade unmountOnExit in={true} timeout={2000}>
                     <div style={heroStyle}>
                         <Hero />
                         <AboutText />

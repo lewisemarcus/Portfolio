@@ -31,6 +31,8 @@ const ProjectCards = () => {
                 return (
                     <div id={index} key={index}>
                         <Slide
+                            direction="up"
+                            unmountOnExit
                             in={true}
                             timeout={1500}
                             style={{

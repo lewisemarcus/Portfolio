@@ -68,7 +68,7 @@ export default function ElevateAppBar(props: Props) {
                         }}
                     >
                         <Typography variant="h6" component="div">
-                            <Zoom in={true} timeout={500}>
+                            <Zoom in={true} timeout={500} unmountOnExit>
                                 <Stack
                                     sx={{ pb: 1 }}
                                     direction="row"
@@ -85,9 +85,7 @@ export default function ElevateAppBar(props: Props) {
                                         onClick={() => {
                                             const button =
                                                 document.getElementById("menu2")
-                                            console.log(
-                                                button.style.backgroundColor,
-                                            )
+
                                             button.style.backgroundColor =
                                                 button.style.backgroundColor ===
                                                 "rgb(25, 118, 210)"

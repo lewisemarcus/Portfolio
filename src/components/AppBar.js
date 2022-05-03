@@ -76,9 +76,7 @@ export default function ElevateAppBar(props: Props) {
                                     onClick={() => {
                                         const button =
                                             document.getElementById("menu")
-                                        console.log(
-                                            button.style.backgroundColor,
-                                        )
+
                                         button.style.backgroundColor =
                                             button.style.backgroundColor ===
                                             "rgb(25, 118, 210)"

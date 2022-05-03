@@ -20,7 +20,7 @@ function ScrollTop(props) {
         threshold: 100,
     })
     return (
-        <Zoom in={trigger}>
+        <Zoom in={trigger} unmountOnExit>
             <Box
                 onClick={handleClick}
                 role="presentation"
@@ -59,7 +59,6 @@ const Projects = (props) => {
 
                 <div
                     style={{
-                        marginTop: "25px",
                         display: "flex",
                         flexWrap: "wrap",
                         justifyContent: "center",

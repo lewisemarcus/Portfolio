@@ -8,15 +8,18 @@ import CardContent from "@mui/material/CardContent"
 import CardMedia from "@mui/material/CardMedia"
 import "./LargeProjCard.css"
 import Slide from "@mui/material/Slide"
+import useScrollTrigger from "@mui/material/useScrollTrigger"
 
 const LargeCard = () => {
+    const trigger = useScrollTrigger()
+
     React.useEffect(() => {
         setTimeout(function () {
             document.getElementById("largeCard").classList.add("LargeCard")
         }, 1000)
     })
     return (
-        <Slide direction="down" in={true} timeout={1000}>
+        <Slide direction="up" in={true} timeout={1000} unmountOnExit>
             <Card id="largeCard" sx={{ mb: 3, maxWidth: 800 }}>
                 <CardMedia
                     component="img"

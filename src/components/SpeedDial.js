@@ -36,12 +36,7 @@ const actions = [
 
 export default function BasicSpeedDial() {
     return (
-        <Box
-            sx={{ flexGrow: 1 }}
-            onClick={(e) => {
-                console.log(e.target)
-            }}
-        >
+        <Box sx={{ flexGrow: 1 }}>
             <SpeedDial
                 direction="up"
                 ariaLabel="SpeedDial"

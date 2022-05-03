@@ -7,7 +7,6 @@ import Box from "@mui/material/Box"
 import Fade from "@mui/material/Fade"
 import Grow from "@mui/material/Grow"
 import Slide from "@mui/material/Slide"
-import Link from "@mui/material/Link"
 import { Link as ReactLink } from "react-router-dom"
 
 const Hero = () => {
@@ -26,7 +25,7 @@ const Hero = () => {
                     pr: 0,
                 }}
             >
-                <Fade in={true} timeout={1500}>
+                <Fade unmountOnExit in={true} timeout={1500}>
                     <div>
                         <Typography
                             component="h1"
@@ -40,7 +39,7 @@ const Hero = () => {
                         </Typography>
                     </div>
                 </Fade>
-                <Slide direction="up" in={true} timeout={1000}>
+                <Slide unmountOnExit direction="up" in={true} timeout={1000}>
                     <div>
                         <Typography
                             variant="h5"
@@ -54,7 +53,7 @@ const Hero = () => {
                     </div>
                 </Slide>
 
-                <Grow in={true} timeout={2000}>
+                <Grow unmountOnExit in={true} timeout={2000}>
                     <div>
                         <Stack
                             sx={{ pt: 3 }}
