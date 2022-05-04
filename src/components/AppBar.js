@@ -3,7 +3,7 @@ import AppBar from "@mui/material/AppBar"
 import Toolbar from "@mui/material/Toolbar"
 import Typography from "@mui/material/Typography"
 import CssBaseline from "@mui/material/CssBaseline"
-import useScrollTrigger from "@mui/material/useScrollTrigger"
+
 import Stack from "@mui/material/Stack"
 import Button from "@mui/material/Button"
 import Zoom from "@mui/material/Zoom"
@@ -24,27 +24,18 @@ interface Props {
     children: React.ReactElement;
 }
 
-function ElevationScroll(props: Props) {
-    const { children, window } = props
-    // Note that you normally won't need to set the window ref as useScrollTrigger
-    // will default to window.
-    // This is only being set here because the demo is in an iframe.
-    const trigger = useScrollTrigger({
-        disableHysteresis: true,
-        threshold: 0,
-        target: window ? window() : undefined,
-    })
-
-    return React.cloneElement(children, {
-        elevation: trigger ? 3 : 0,
-        style: trigger
-            ? { backgroundColor: "white" }
-            : { backgroundColor: "transparent" },
-    })
-}
 window.onload = () => {
-    document.getElementById("menu").style.backgroundColor = "rgb(25, 118, 210)"
-    document.getElementById("menu").style.color = "white"
+    if (document.getElementById("menu")) {
+        document.getElementById("menu").style.backgroundColor =
+            "rgb(25, 118, 210)"
+        document.getElementById("menu").style.color = "white"
+    }
+
+    if (document.getElementById("menu2")) {
+        document.getElementById("menu2").style.backgroundColor =
+            "rgb(25, 118, 210)"
+        document.getElementById("menu2").style.color = "white"
+    }
 }
 export default function ElevateAppBar(props: Props) {
     const [anchorEl, setAnchorEl] = React.useState(null)
@@ -67,112 +58,108 @@ export default function ElevateAppBar(props: Props) {
     return (
         <React.Fragment>
             <CssBaseline />
-            <ElevationScroll {...props}>
-                <AppBar
-                    sx={{ backgroundColor: "transparent", p: 0, height: 55 }}
-                >
-                    <Toolbar sx={{ justifyContent: "flex-start" }}>
-                        <Typography variant="h6" component="div">
-                            <Zoom in={true} timeout={500} unmountOnExit>
-                                <Stack
-                                    direction="row"
-                                    spacing={1}
-                                    sx={{ pb: 1 }}
-                                >
-                                    <Button
-                                        sx={{
-                                            minWidth: "0px !important",
-                                            maxWidth: "50px !important",
-                                        }}
-                                        id="menu"
-                                        className={"button"}
-                                        variant="contained"
-                                        onClick={(event) => {
-                                            handleClick(event)
-                                        }}
-                                    >
-                                        <MenuIcon />
-                                    </Button>
-                                </Stack>
-                            </Zoom>
-                            <Menu
-                                id="fade-menu"
-                                MenuListProps={{
-                                    "aria-labelledby": "menu",
-                                }}
-                                anchorEl={anchorEl}
-                                open={open}
-                                onClose={handleClose}
-                                TransitionComponent={Zoom}
-                            >
-                                <ReactLink
-                                    color="inherit"
-                                    to="/"
-                                    style={{
-                                        textDecoration: "none",
-                                        color: "rgb(25, 118, 210)",
+
+            <AppBar
+                elevation={0}
+                sx={{ backgroundColor: "transparent", p: 0, height: 55 }}
+            >
+                <Toolbar sx={{ justifyContent: "flex-start" }}>
+                    <Typography variant="h6" component="div">
+                        <Zoom in={true} timeout={500} unmountOnExit>
+                            <Stack direction="row" spacing={1} sx={{ pb: 1 }}>
+                                <Button
+                                    sx={{
+                                        minWidth: "0px !important",
+                                        maxWidth: "50px !important",
+                                    }}
+                                    id="menu"
+                                    className={"button"}
+                                    variant="contained"
+                                    onClick={(event) => {
+                                        handleClick(event)
                                     }}
                                 >
-                                    <MenuItem
-                                        onClick={handleClose}
-                                        id="home"
-                                        style={{
-                                            padding: 10,
-                                            justifyContent: "center",
-                                        }}
-                                    >
-                                        <HomeIcon
-                                            className={"home"}
-                                            sx={{
-                                                color: "rgb(25, 118, 210)",
-                                            }}
-                                        />
-                                    </MenuItem>
-                                </ReactLink>
-                                <ReactLink
-                                    color="inherit"
-                                    to="/Projects"
-                                    style={{ textDecoration: "none" }}
-                                >
-                                    <MenuItem
-                                        id="projects"
-                                        variant="contained"
-                                        className={"projects"}
-                                        style={{
-                                            color: "rgb(25, 118, 210)",
-                                            fontWeight: "bolder",
-                                            textDecoration: "none",
-                                            padding: 10,
-                                            justifyContent: "center",
-                                        }}
-                                    >
-                                        Projects
-                                    </MenuItem>
-                                </ReactLink>
-
+                                    <MenuIcon />
+                                </Button>
+                            </Stack>
+                        </Zoom>
+                        <Menu
+                            id="fade-menu"
+                            MenuListProps={{
+                                "aria-labelledby": "menu",
+                            }}
+                            anchorEl={anchorEl}
+                            open={open}
+                            onClose={handleClose}
+                            TransitionComponent={Zoom}
+                        >
+                            <ReactLink
+                                color="inherit"
+                                to="/"
+                                style={{
+                                    textDecoration: "none",
+                                    color: "rgb(25, 118, 210)",
+                                }}
+                            >
                                 <MenuItem
+                                    onClick={handleClose}
+                                    id="home"
                                     style={{
                                         padding: 10,
                                         justifyContent: "center",
-                                        color: "rgb(25, 118, 210)",
-                                    }}
-                                    variant="contained"
-                                    id="pdf"
-                                    className={"pdf"}
-                                    onClick={(e) => {
-                                        window.open(
-                                            "https://drive.google.com/file/d/1XJrrWRCApNQ46KRY1wKpbZy5K33CQNQX/view?usp=sharing",
-                                            "_blank",
-                                        )
                                     }}
                                 >
-                                    <PictureAsPdfIcon />
+                                    <HomeIcon
+                                        className={"home"}
+                                        sx={{
+                                            color: "rgb(25, 118, 210)",
+                                        }}
+                                    />
                                 </MenuItem>
-                            </Menu>
-                        </Typography>
-                    </Toolbar>
-                </AppBar>
-            </ElevationScroll>
+                            </ReactLink>
+                            <ReactLink
+                                color="inherit"
+                                to="/Projects"
+                                style={{ textDecoration: "none" }}
+                            >
+                                <MenuItem
+                                    id="projects"
+                                    variant="contained"
+                                    className={"projects"}
+                                    style={{
+                                        color: "rgb(25, 118, 210)",
+                                        fontWeight: "bolder",
+                                        textDecoration: "none",
+                                        padding: 10,
+                                        justifyContent: "center",
+                                    }}
+                                >
+                                    Projects
+                                </MenuItem>
+                            </ReactLink>
+
+                            <MenuItem
+                                style={{
+                                    padding: 10,
+                                    justifyContent: "center",
+                                    color: "rgb(25, 118, 210)",
+                                }}
+                                variant="contained"
+                                id="pdf"
+                                className={"pdf"}
+                                onClick={(e) => {
+                                    window.open(
+                                        "https://drive.google.com/file/d/1XJrrWRCApNQ46KRY1wKpbZy5K33CQNQX/view?usp=sharing",
+                                        "_blank",
+                                    )
+                                }}
+                            >
+                                <PictureAsPdfIcon />
+                            </MenuItem>
+                        </Menu>
+                    </Typography>
+                </Toolbar>
+            </AppBar>
             <Toolbar />
         </React.Fragment>
     )
