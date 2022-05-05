@@ -150,6 +150,26 @@ export default function ElevateAppBar(props: Props) {
                                     Resume
                                 </MenuItem>
                             </ReactLink>
+                            <ReactLink
+                                color="inherit"
+                                to="/Contact"
+                                style={{ textDecoration: "none" }}
+                            >
+                                <MenuItem
+                                    id="contact"
+                                    variant="contained"
+                                    className={"projects"}
+                                    style={{
+                                        color: "rgb(25, 118, 210)",
+                                        fontWeight: "bolder",
+                                        textDecoration: "none",
+                                        padding: 10,
+                                        justifyContent: "center",
+                                    }}
+                                >
+                                    Contact
+                                </MenuItem>
+                            </ReactLink>
                             <HashLink
                                 scroll={(el) => scrollBugZapper(el)}
                                 smooth

@@ -49,7 +49,7 @@ const ParticleEffect = () => {
                         color: "#1565C0",
                         distance: 150,
                         enable: true,
-                        opacity: 0.5,
+                        opacity: 0.25,
                         width: 10,
                     },
                     collisions: {
@@ -76,10 +76,10 @@ const ParticleEffect = () => {
                         value: 0.5,
                     },
                     shape: {
-                        type: "circle",
+                        type: "square",
                     },
                     size: {
-                        value: { min: 20, max: 10 },
+                        value: { min: 10, max: 10 },
                     },
                 },
                 detectRetina: false,

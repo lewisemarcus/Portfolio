@@ -10,6 +10,7 @@ import Fab from "@mui/material/Fab"
 import useScrollTrigger from "@mui/material/useScrollTrigger"
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
 import Zoom from "@mui/material/Zoom"
+import Fade from "@mui/material/Fade"
 import SendIcon from "@mui/icons-material/Send"
 
 function ScrollTop(props) {
@@ -85,10 +86,12 @@ export default function ValidationTextFields(props) {
 
     const sendMessage = () => {
         if (name.length === 0 || email.length === 0 || message.length === 0)
-            alert("Please fill in the fields before submitting!")
+            return alert("Please fill in the fields before submitting!")
 
-        if (checkMessage && checkName && checkEmail) {
-        } else alert("Please fill each form out correctly!")
+        if (nameCheck && emailCheck && messageCheck) {
+            alert("Message sent!")
+            return window.location.replace("/")
+        } else return alert("Please fill each form out correctly!")
     }
 
     React.useEffect(() => {
@@ -101,91 +104,93 @@ export default function ValidationTextFields(props) {
             <Container>
                 <ParticleEffect />
                 <ElevateAppBar />
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                    <Box
-                        style={cardStyle}
-                        component="form"
-                        sx={{
-                            flexWrap: "wrap",
-                            flexDirection: "column",
-                            width: 1000,
-                            "& .MuiTextField-root": {
-                                m: 1,
-                                flexWrap: "wrap",
-                                flexDirection: "column",
-                            },
-                            "& .MuiFormControl-root": {
-                                flexDirection: "row",
-                            },
-                            "& .MuiFilledInput-root": {
-                                flexWrap: "wrap",
-                                flexDirection: "column",
-                            },
-                        }}
-                        noValidate
-                        autoComplete="off"
-                    >
-                        <div
-                            style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                flexWrap: "wrap",
-                            }}
-                        >
-                            <TextField
-                                error={nameCheck}
-                                id="name-error-helper"
-                                label="Name"
-                                fullWidth
-                                helperText="Please enter a first and last name with both first letters capitalized."
-                                variant="filled"
-                                onChange={(event) => {
-                                    setName(event.target.value)
-                                    checkName(event.target.value)
-                                }}
-                            />
-                            <TextField
-                                error={emailCheck}
-                                fullWidth
-                                id="email-error-helper"
-                                label="Email"
-                                helperText="Please enter a valid email."
-                                variant="filled"
-                                onChange={(event) => {
-                                    setEmail(event.target.value)
-                                    checkEmail(event.target.value)
-                                }}
-                            />
-
-                            <TextField
-                                error={messageCheck}
-                                fullWidth
-                                id="message-error-helper"
-                                label="Message"
-                                helperText="Please enter a message."
-                                variant="filled"
-                                onChange={(event) => {
-                                    setMessage(event.target.value)
-                                    checkMessage(event.target.value)
-                                }}
-                            />
-                        </div>
-                        <Button
+                <Fade in={true} timeout={1500}>
+                    <div style={{ display: "flex", justifyContent: "center" }}>
+                        <Box
+                            style={cardStyle}
+                            component="form"
                             sx={{
-                                minWidth: "0px !important",
-                                maxWidth: "50px !important",
+                                flexWrap: "wrap",
+                                flexDirection: "column",
+                                width: 1000,
+                                "& .MuiTextField-root": {
+                                    m: 1,
+                                    flexWrap: "wrap",
+                                    flexDirection: "column",
+                                },
+                                "& .MuiFormControl-root": {
+                                    flexDirection: "row",
+                                },
+                                "& .MuiFilledInput-root": {
+                                    flexWrap: "wrap",
+                                    flexDirection: "column",
+                                },
                             }}
-                            id="send"
-                            className={"button"}
-                            variant="contained"
-                            onClick={() => {
-                                sendMessage()
-                            }}
+                            noValidate
+                            autoComplete="off"
                         >
-                            <SendIcon />
-                        </Button>
-                    </Box>
-                </div>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    flexWrap: "wrap",
+                                }}
+                            >
+                                <TextField
+                                    error={nameCheck}
+                                    id="name-error-helper"
+                                    label="Name"
+                                    fullWidth
+                                    helperText="Please enter a first and last name with both first letters capitalized."
+                                    variant="filled"
+                                    onChange={(event) => {
+                                        setName(event.target.value)
+                                        checkName(event.target.value)
+                                    }}
+                                />
+                                <TextField
+                                    error={emailCheck}
+                                    fullWidth
+                                    id="email-error-helper"
+                                    label="Email"
+                                    helperText="Please enter a valid email."
+                                    variant="filled"
+                                    onChange={(event) => {
+                                        setEmail(event.target.value)
+                                        checkEmail(event.target.value)
+                                    }}
+                                />
+
+                                <TextField
+                                    error={messageCheck}
+                                    fullWidth
+                                    id="message-error-helper"
+                                    label="Message"
+                                    helperText="Please enter a message."
+                                    variant="filled"
+                                    onChange={(event) => {
+                                        setMessage(event.target.value)
+                                        checkMessage(event.target.value)
+                                    }}
+                                />
+                            </div>
+                            <Button
+                                sx={{
+                                    minWidth: "0px !important",
+                                    maxWidth: "50px !important",
+                                }}
+                                id="send"
+                                className={"button"}
+                                variant="contained"
+                                onClick={() => {
+                                    sendMessage()
+                                }}
+                            >
+                                <SendIcon />
+                            </Button>
+                        </Box>
+                    </div>
+                </Fade>
             </Container>
             <ScrollTop {...props}>
                 <Fab
