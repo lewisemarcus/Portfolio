@@ -108,7 +108,7 @@ export default function ValidationTextFields(props) {
 
     return (
         <React.Fragment>
-            <div id="back-to-top-anchor" style={{ marginBottom: 40 }}></div>
+            <div id="back-to-top-anchor" style={{ marginBottom: 20 }}></div>
             <Container>
                 <ParticleEffect />
                 <ElevateAppBar />
@@ -118,6 +118,7 @@ export default function ValidationTextFields(props) {
                             style={cardStyle}
                             component="form"
                             sx={{
+                                mb: 10,
                                 opacity: 1,
                                 backgroundColor: "#fdfdfd",
                                 flexWrap: "wrap",
@@ -126,6 +127,7 @@ export default function ValidationTextFields(props) {
                                 alignItems: "flex-end",
                                 p: 1,
                                 borderRadius: 5,
+
                                 "& .MuiTextField-root": {
                                     m: 1,
                                     flexWrap: "wrap",
@@ -133,10 +135,6 @@ export default function ValidationTextFields(props) {
                                 },
                                 "& .MuiFormControl-root": {
                                     flexDirection: "row",
-                                },
-                                "& .MuiFilledInput-root": {
-                                    flexWrap: "wrap",
-                                    flexDirection: "column",
                                 },
                             }}
                             noValidate
@@ -154,9 +152,11 @@ export default function ValidationTextFields(props) {
                                     id="name-error-helper"
                                     label="Name"
                                     name=""
+                                    multiline
                                     fullWidth
                                     helperText="Please enter a first and last name with both first letters capitalized."
                                     variant="filled"
+                                    sx={{ flexWrap: "wrap" }}
                                     onChange={(event) => {
                                         setName(event.target.value)
                                         checkName(event.target.value)
@@ -167,8 +167,10 @@ export default function ValidationTextFields(props) {
                                     fullWidth
                                     id="email-error-helper"
                                     label="Email"
+                                    multiline
                                     helperText="Please enter a valid email."
                                     variant="filled"
+                                    sx={{ flexWrap: "wrap" }}
                                     onChange={(event) => {
                                         setEmail(event.target.value)
                                         checkEmail(event.target.value)
@@ -178,6 +180,7 @@ export default function ValidationTextFields(props) {
                                 <TextField
                                     error={messageCheck}
                                     fullWidth
+                                    multiline
                                     id="message-error-helper"
                                     label="Message"
                                     helperText="Please enter a message."
