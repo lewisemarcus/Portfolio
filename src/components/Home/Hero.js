@@ -76,6 +76,13 @@ const Hero = () => {
                             >
                                 <Button variant="contained">Resume</Button>
                             </ReactLink>
+                            <ReactLink
+                                color="inherit"
+                                to="/Contact"
+                                style={{ textDecoration: "none" }}
+                            >
+                                <Button variant="contained">Contact</Button>
+                            </ReactLink>
                         </Stack>
                     </div>
                 </Grow>

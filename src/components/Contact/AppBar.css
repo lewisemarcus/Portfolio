@@ -1,0 +1,17 @@
+.home {
+    transition: all 0.25s !important;
+}
+
+.pdf {
+    transition: all 0.1s !important;
+}
+
+.projects {
+    transition: all 0.15s !important;
+}
+
+.button {
+    transition: all 0.25s !important;
+    background-color: #1976d2;
+    color: white;
+}

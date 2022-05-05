@@ -4,4 +4,6 @@ import Projects from "./Projects/Projects"
 
 import Resume from "./Resume/Resume"
 
-export { Home, Projects, Resume }
+import Contact from "./Contact/Contact"
+
+export { Home, Projects, Resume, Contact }
