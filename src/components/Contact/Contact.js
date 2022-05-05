@@ -112,7 +112,7 @@ export default function ValidationTextFields(props) {
             <Container>
                 <ParticleEffect />
                 <ElevateAppBar />
-                <Fade unmountOnExit in={true} timeout={1500}>
+                <Fade unmountOnExit in={true} timeout={500}>
                     <div style={{ display: "flex", justifyContent: "center" }}>
                         <Box
                             style={cardStyle}
