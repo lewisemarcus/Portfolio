@@ -13,6 +13,7 @@ import Zoom from "@mui/material/Zoom"
 import Fade from "@mui/material/Fade"
 import SendIcon from "@mui/icons-material/Send"
 import sendEmail from "../../services/email-service"
+import "./Contact.css"
 
 function ScrollTop(props) {
     const { children, window } = props
@@ -103,7 +104,8 @@ export default function ValidationTextFields(props) {
     }
 
     React.useEffect(() => {
-        document.getElementById("message-error-helper").style.height = "10em"
+        console.log(document.getElementById("message-error-helper"))
+        document.getElementById("message-error-helper").classList.add("message")
     })
 
     return (

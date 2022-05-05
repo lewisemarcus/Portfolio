@@ -23,19 +23,6 @@ interface Props {
     children: React.ReactElement;
 }
 
-window.onload = () => {
-    if (document.getElementById("menu")) {
-        document.getElementById("menu").style.backgroundColor =
-            "rgb(25, 118, 210)"
-        document.getElementById("menu").style.color = "white"
-    }
-
-    if (document.getElementById("menu2")) {
-        document.getElementById("menu2").style.backgroundColor =
-            "rgb(25, 118, 210)"
-        document.getElementById("menu2").style.color = "white"
-    }
-}
 export default function ElevateAppBar(props: Props) {
     const [anchorEl, setAnchorEl] = React.useState(null)
     const open = Boolean(anchorEl)

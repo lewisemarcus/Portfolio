@@ -25,6 +25,8 @@ interface Props {
 }
 
 window.onload = () => {
+    if (document.getElementById("message-error-helper"))
+        document.getElementById("message-error-helper").style.height = "10em"
     if (document.getElementById("menu")) {
         document.getElementById("menu").style.backgroundColor =
             "rgb(25, 118, 210)"
