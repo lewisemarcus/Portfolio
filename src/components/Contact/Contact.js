@@ -5,13 +5,14 @@ import TextField from "@mui/material/TextField"
 import Button from "@mui/material/Button"
 import ParticleEffect from "./Particles"
 import ElevateAppBar from "./AppBar"
-import BasicSpeedDial from "../SpeedDial"
+import BottomNav from "../BottomNav"
 import Fab from "@mui/material/Fab"
 import useScrollTrigger from "@mui/material/useScrollTrigger"
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
 import Zoom from "@mui/material/Zoom"
 import Fade from "@mui/material/Fade"
 import SendIcon from "@mui/icons-material/Send"
+import sendEmail from "../../services/email-service"
 
 function ScrollTop(props) {
     const { children, window } = props
@@ -88,7 +89,14 @@ export default function ValidationTextFields(props) {
         if (name.length === 0 || email.length === 0 || message.length === 0)
             return alert("Please fill in the fields before submitting!")
 
-        if (nameCheck && emailCheck && messageCheck) {
+        if (!nameCheck && !emailCheck && !messageCheck) {
+            const content = {
+                from_name: name,
+                from_email: email,
+                message: message,
+            }
+            console.log(content)
+            sendEmail(content)
             alert("Message sent!")
             return window.location.replace("/")
         } else return alert("Please fill each form out correctly!")
@@ -104,15 +112,20 @@ export default function ValidationTextFields(props) {
             <Container>
                 <ParticleEffect />
                 <ElevateAppBar />
-                <Fade in={true} timeout={1500}>
+                <Fade unmountOnExit in={true} timeout={1500}>
                     <div style={{ display: "flex", justifyContent: "center" }}>
                         <Box
                             style={cardStyle}
                             component="form"
                             sx={{
+                                opacity: 1,
+                                backgroundColor: "#fdfdfd",
                                 flexWrap: "wrap",
                                 flexDirection: "column",
                                 width: 1000,
+                                alignItems: "flex-end",
+                                p: 1,
+                                borderRadius: 5,
                                 "& .MuiTextField-root": {
                                     m: 1,
                                     flexWrap: "wrap",
@@ -140,6 +153,7 @@ export default function ValidationTextFields(props) {
                                     error={nameCheck}
                                     id="name-error-helper"
                                     label="Name"
+                                    name=""
                                     fullWidth
                                     helperText="Please enter a first and last name with both first letters capitalized."
                                     variant="filled"
@@ -178,6 +192,7 @@ export default function ValidationTextFields(props) {
                                 sx={{
                                     minWidth: "0px !important",
                                     maxWidth: "50px !important",
+                                    justifyContent: "center",
                                 }}
                                 id="send"
                                 className={"button"}
@@ -201,7 +216,11 @@ export default function ValidationTextFields(props) {
                     <KeyboardArrowUpIcon />
                 </Fab>
             </ScrollTop>
-            <BasicSpeedDial />
+            <Fade unmountOnExit in={true} timeout={2000}>
+                <div>
+                    <BottomNav />
+                </div>
+            </Fade>
         </React.Fragment>
     )
 }
