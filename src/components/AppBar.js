@@ -149,7 +149,7 @@ export default function ElevateAppBar(props: Props) {
                                 className={"pdf"}
                                 onClick={(e) => {
                                     window.open(
-                                        "https://drive.google.com/file/d/1XJrrWRCApNQ46KRY1wKpbZy5K33CQNQX/view?usp=sharing",
+                                        "https://drive.google.com/file/d/1EceWvGlGMabyicNEMFwkYFqqRi4Ug-sf/view?usp=sharing",
                                         "_blank",
                                     )
                                 }}
