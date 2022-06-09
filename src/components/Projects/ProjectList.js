@@ -1,3 +1,19 @@
+const Soundify = {
+    title: "Soundify: Listen/Jive/Relax",
+    short: "Soundify",
+    body: "Soundify is a online music player where users are required to create an account or login to our site to listen, upload, and comment on songs. Users can search for songs and create and update playlists.",
+    github: "https://github.com/lewisemarcus/Soundify",
+    deployed: "https://soundify-home.herokuapp.com/",
+    image: "/static/images/cards/pollMap.PNG",
+    delay: 250,
+    contributions:
+        "https://github.com/lewisemarcus/Soundify/commits?author=lewisemarcus",
+    tech: "MongoDB Atlas, Amazon S3, GraphQL, React, Node.js,",
+    role: "Database design and implementation, front-end integration, audio spectrum/waveform creation, audio player integration",
+    href: "#soundify",
+    id: "soundify",
+}
+
 const BugZapper = {
     title: "Bug Zapper: Bug Tracking Application",
     short: "Bug Zapper",
@@ -5,7 +21,7 @@ const BugZapper = {
     github: "https://github.com/lewisemarcus/bugTracker",
     deployed: "bug-zapper-app.herokuapp.com/",
     image: "/static/images/cards/bugTracker.png",
-    delay: 250,
+    delay: 500,
     contributions:
         "https://github.com/lewisemarcus/bugTracker/commits?author=lewisemarcus&before=94a5aceb4ad84b78d80588bd8ba28c319bd6ecdc+35",
     tech: "JavaScript, Express.js, Handlebars.js, MySQL, Node.js, CSS",
@@ -21,7 +37,7 @@ const PollutionMap = {
     github: "https://github.com/lewisemarcus/PollutionMap",
     deployed: "https://lewisemarcus.github.io/PollutionMap/",
     image: "/static/images/cards/pollMap.PNG",
-    delay: 500,
+    delay: 750,
     contributions:
         "https://github.com/lewisemarcus/PollutionMap/commits?author=lewisemarcus",
     tech: "JavaScript, Bulma, OpenLayers Maps, WAQI API, IP API",
@@ -37,7 +53,7 @@ const TechBlog = {
     github: "https://github.com/lewisemarcus/TechBlog",
     deployed: "https://agile-dawn-55678.herokuapp.com/",
     image: "/static/images/cards/techBlog.png",
-    delay: 750,
+    delay: 1000,
     contributions: "https://github.com/lewisemarcus/TechBlog/commits/main",
     tech: "JavaScript, Bootstrap, Express.js, Node.js, MySQL, Handlebars.js",
     role: "All",
@@ -52,7 +68,7 @@ const NoteTaker = {
     github: "https://github.com/lewisemarcus/NoteTaker",
     deployed: "https://secure-fortress-62772.herokuapp.com/",
     image: "/static/images/cards/noteTaker.png",
-    delay: 1000,
+    delay: 1250,
     contributions: "https://github.com/lewisemarcus/NoteTaker/commits/main",
     tech: "JavaScript, Express.js, Node.js, MySQL, CSS",
     role: "All",
@@ -67,7 +83,7 @@ const WeatherDash = {
     github: "https://github.com/lewisemarcus/WeatherDashboard",
     deployed: "https://lewisemarcus.github.io/WeatherDashboard/",
     image: "/static/images/cards/WeatherDash.png",
-    delay: 1250,
+    delay: 1500,
     contributions:
         "https://github.com/lewisemarcus/WeatherDashboard/commits/main",
     tech: "JavaScript, HTML, CSS, OpenWeather API",
@@ -76,6 +92,6 @@ const WeatherDash = {
     id: "weatherDash",
 }
 
-const ProjectList = [PollutionMap, TechBlog, NoteTaker, WeatherDash]
+const ProjectList = [BugZapper, PollutionMap, TechBlog, NoteTaker, WeatherDash]
 
-export { ProjectList, BugZapper }
+export { ProjectList, Soundify }

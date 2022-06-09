@@ -2,7 +2,7 @@ import * as React from "react"
 import Typography from "@mui/material/Typography"
 import Button from "@mui/material/Button"
 import Card from "@mui/material/Card"
-import { BugZapper } from "../ProjectList"
+import { Soundify } from "../ProjectList"
 import CardActions from "@mui/material/CardActions"
 import CardContent from "@mui/material/CardContent"
 import CardMedia from "@mui/material/CardMedia"
@@ -17,40 +17,40 @@ const LargeCard = () => {
     })
     return (
         <Slide direction="up" in={true} timeout={1000} unmountOnExit>
-            <Card id="bugZapper" sx={{ mb: 3, maxWidth: 800 }}>
+            <Card id="soundify" sx={{ mb: 3, maxWidth: 800 }}>
                 <CardMedia
                     component="img"
                     height="300"
-                    image={BugZapper.image}
+                    image={Soundify.image}
                     alt="Bug Tracker"
                     style={{ objectFit: "scale-down" }}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                        {BugZapper.title}
+                        {Soundify.title}
                     </Typography>
                     <Typography variant="body1" color="text.secondary">
-                        {BugZapper.body}
+                        {Soundify.body}
                     </Typography>
                     <Typography
                         variant="body1"
                         color="text.secondary"
                         sx={{ pt: 3 }}
                     >
-                        Technologies Used: {BugZapper.tech}
+                        Technologies Used: {Soundify.tech}
                     </Typography>
                     <Typography
                         variant="body1"
                         color="text.secondary"
                         sx={{ pt: 3 }}
                     >
-                        Role: {BugZapper.role}
+                        Role: {Soundify.role}
                     </Typography>
                 </CardContent>
                 <CardActions sx={{ flexWrap: "wrap" }}>
                     <Button size="small" sx={{ pl: 1 }}>
                         <a
-                            href={BugZapper.github}
+                            href={Soundify.github}
                             style={{
                                 textDecoration: "none",
                                 color: "rgb(25, 118, 210)",
@@ -61,7 +61,7 @@ const LargeCard = () => {
                     </Button>
                     <Button size="small" sx={{ pl: 0, ml: 0 }}>
                         <a
-                            href={BugZapper.deployed}
+                            href={Soundify.deployed}
                             style={{
                                 textDecoration: "none",
                                 color: "rgb(25, 118, 210)",
@@ -72,7 +72,7 @@ const LargeCard = () => {
                     </Button>
                     <Button size="small" sx={{ pl: 0, ml: 0 }}>
                         <a
-                            href={BugZapper.contributions}
+                            href={Soundify.contributions}
                             style={{
                                 textDecoration: "none",
                                 color: "rgb(25, 118, 210)",

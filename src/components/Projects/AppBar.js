@@ -13,7 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu"
 import Menu from "@mui/material/Menu"
 import MenuItem from "@mui/material/MenuItem"
 import "./AppBar.css"
-import { ProjectList, BugZapper } from "./ProjectList"
+import { ProjectList, Soundify } from "./ProjectList"
 
 interface Props {
     /**
@@ -169,7 +169,7 @@ export default function ElevateAppBar(props: Props) {
                             <HashLink
                                 scroll={(el) => scrollBugZapper(el)}
                                 smooth
-                                to={BugZapper.href}
+                                to={Soundify.href}
                                 style={{
                                     textDecoration: "none",
                                 }}
@@ -184,7 +184,7 @@ export default function ElevateAppBar(props: Props) {
                                         justifyContent: "center",
                                     }}
                                 >
-                                    {BugZapper.short}
+                                    {Soundify.short}
                                 </MenuItem>
                             </HashLink>
                             {ProjectList.map((project, index) => {
