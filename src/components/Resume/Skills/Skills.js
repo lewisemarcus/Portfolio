@@ -10,6 +10,8 @@ const Development = {
         "MySQL, Sequelize",
         "RESTful API design",
         "MongoDB, Mongoose",
+        "GraphQL, ApolloServer"
+        "Amazon S3 Services"
     ],
 }
 
