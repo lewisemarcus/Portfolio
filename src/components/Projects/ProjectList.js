@@ -3,7 +3,7 @@ const Soundify = {
     short: "Soundify",
     body: "Soundify is a online music player where users are required to create an account or login to our site to listen, upload, and comment on songs. Users can search for songs and create and update playlists.",
     github: "https://github.com/lewisemarcus/Soundify",
-    deployed: "https://soundify-home.herokuapp.com/",
+    deployed: "https://www.soundify.live/",
     image: "/static/images/cards/soundify.png",
     delay: 250,
     contributions:
