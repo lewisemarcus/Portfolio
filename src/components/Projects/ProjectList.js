@@ -9,7 +9,7 @@ const Soundify = {
     contributions:
         "https://github.com/lewisemarcus/Soundify/commits?author=lewisemarcus",
     tech: "JavaScript, MongoDB Atlas, Amazon S3, GraphQL, React, Node.js, Express.js, AntDesign",
-    role: "Database design and implementation, front-end integration, audio spectrum/waveform creation, audio player integration",
+    role: "Database design and implementation, GraphQL integration, front-end integration, audio spectrum/waveform creation, audio player integration",
     href: "#soundify",
     id: "soundify",
 }
