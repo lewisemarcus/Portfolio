@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
-import { navlink } from "../data/data"
-import logo from "../data/images/logo.png"
+import { navlink, logo } from "../data/data"
 import { useState } from "react"
 import { Menu } from "@mui/icons-material"
 
@@ -15,8 +14,8 @@ export const Header = () => {
                         <img
                             src={logo}
                             style={{
-                                width: 110,
-                                height: 70,
+                                width: 53,
+                                height: 53,
                             }}
                             alt="logo"
                         />

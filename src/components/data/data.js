@@ -31,7 +31,7 @@ export const home = {
     post: "A FULL-STACK DEVELOPER",
     desc: `I am a Full Stack Web Developer with a background in Content Analysis, denoted by my certificate in Full-Stack Development from UCI's Full-Stack Program. `,
 }
-
+export const logo = "/static/images/newlogo.png"
 export const about = {
     desc: "I am gifted in evaluating risk and loss potential and developing information for new and renewal policies. I am team-oriented with success in creating case studies and content validation. I try to be at the forefront of all projects I work on to make sure I get the experience and understand the entirety of the project, exemplified by my roles in projects and tasks I've undertaken.",
     desc1: `For each project, my goal was to immerse myself with the most "difficult" aspects of them, such as back-end development and integration. I am highly motivated and eager to grow my career as a Developer. I have a desire for industry knowledge and trends to implement further in my career.`,
