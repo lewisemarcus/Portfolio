@@ -1,7 +1,7 @@
 import { home } from "../data/data"
 import Typewriter from "typewriter-effect"
 import ParticleEffect from "../common/Particles"
-
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward"
 export const Hero = () => {
     return (
         <>
@@ -21,6 +21,11 @@ export const Hero = () => {
                     <p data-aos="fade-left">{home.desc}</p>
                 </div>
             </section>
+            <div className="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </>
     )
 }

@@ -2,10 +2,12 @@ import { Visibility } from "@mui/icons-material"
 import ParticleEffect from "../common/Particles"
 import { projects } from "../data/data"
 import { Heading } from "../common/Heading"
+import { useLocation } from "react-router-dom"
 export const Projects = () => {
+    const location = useLocation()
     return (
         <>
-            <article>
+            <article data-aos="fade-up">
                 <div className="container articleContainer">
                     <ParticleEffect />
                     <Heading title="Projects" />
@@ -55,6 +57,16 @@ export const Projects = () => {
                     </div>
                 </div>
             </article>
+            {location.pathname.split("/")[1] === "" && (
+                <div
+                    className="arrow"
+                    style={{ marginTop: "-50px", marginBottom: "200px" }}
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            )}
         </>
     )
 }

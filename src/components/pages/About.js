@@ -2,9 +2,11 @@ import { about } from "../data/data"
 import { Heading } from "../common/Heading"
 import ProfilePic from "../data/images/ProfilePic.jpg"
 import ParticleEffect from "../common/Particles"
+import { useLocation } from "react-router-dom"
 export const About = () => {
+    const location = useLocation()
     return (
-        <div className="sections">
+        <div className="sections" data-aos="fade-up">
             <ParticleEffect />
             <section className="about">
                 <div className="container flex">
@@ -38,6 +40,16 @@ export const About = () => {
                     </div>
                 </div>
             </section>
+            {location.pathname.split("/")[1] === "" && (
+                <div
+                    className="arrow"
+                    style={{ marginTop: "-50px", marginBottom: "200px" }}
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            )}
         </div>
     )
 }
