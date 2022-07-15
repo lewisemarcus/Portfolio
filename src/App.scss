@@ -204,7 +204,9 @@ section {
     z-index: 1;
 }
 .hero h1 {
-    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
     font-weight: 600;
     color: var(--primaryColor);
 }
