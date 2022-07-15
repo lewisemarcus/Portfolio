@@ -3,9 +3,7 @@ import Box from "@mui/material/Box"
 import Container from "@mui/material/Container"
 import TextField from "@mui/material/TextField"
 import Button from "@mui/material/Button"
-import ParticleEffect from "./Particles"
-import ElevateAppBar from "./AppBar"
-import BottomNav from "../BottomNav"
+import ParticleEffect from "../common/Particles"
 import Fab from "@mui/material/Fab"
 import useScrollTrigger from "@mui/material/useScrollTrigger"
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp"
@@ -43,7 +41,12 @@ function ScrollTop(props) {
             <Box
                 onClick={handleClick}
                 role="presentation"
-                sx={{ position: "fixed", bottom: 16, right: 16 }}
+                sx={{
+                    position: "fixed",
+                    bottom: 16,
+                    right: 16,
+                    zIndex: "150 !important",
+                }}
             >
                 {children}
             </Box>
@@ -58,7 +61,7 @@ const cardStyle = {
     justifyContent: "center",
 }
 
-export default function ValidationTextFields(props) {
+export default function Contact(props) {
     const [name, setName] = React.useState("")
     const [nameCheck, nameCheckF] = React.useState(false)
 
@@ -69,8 +72,7 @@ export default function ValidationTextFields(props) {
     const [messageCheck, messageCheckF] = React.useState(false)
 
     const checkName = (name) => {
-        if (name.match(/^[A-Z][a-z]{0,19}[\s,][A-Z][a-z]{0,19}$/))
-            nameCheckF(false)
+        if (name.match(/^[a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$/)) nameCheckF(false)
         else nameCheckF(true)
         if (name.length === 0) nameCheckF(false)
     }
@@ -96,7 +98,6 @@ export default function ValidationTextFields(props) {
                 from_email: email,
                 message: message,
             }
-            console.log(content)
             sendEmail(content)
             alert("Message sent!")
             return window.location.replace("/")
@@ -104,16 +105,15 @@ export default function ValidationTextFields(props) {
     }
 
     React.useEffect(() => {
-        console.log(document.getElementById("message-error-helper"))
         document.getElementById("message-error-helper").classList.add("message")
     })
 
     return (
         <React.Fragment>
-            <div id="back-to-top-anchor" style={{ marginBottom: 20 }}></div>
-            <Container>
+            <div id="back-to-top-anchor" style={{ marginBottom: 50 }}></div>
+            <Container data-aos="fade-up">
                 <ParticleEffect />
-                <ElevateAppBar />
+
                 <Fade unmountOnExit in={true} timeout={500}>
                     <div style={{ display: "flex", justifyContent: "center" }}>
                         <Box
@@ -122,14 +122,14 @@ export default function ValidationTextFields(props) {
                             sx={{
                                 mb: 10,
                                 opacity: 1,
-                                backgroundColor: "#fdfdfd",
+                                backgroundColor: "#d6d6d6",
                                 flexWrap: "wrap",
                                 flexDirection: "column",
                                 width: 1000,
                                 alignItems: "flex-end",
                                 p: 1,
                                 borderRadius: 5,
-
+                                zIndex: 1,
                                 "& .MuiTextField-root": {
                                     m: 1,
                                     flexWrap: "wrap",
@@ -153,10 +153,9 @@ export default function ValidationTextFields(props) {
                                     error={nameCheck}
                                     id="name-error-helper"
                                     label="Name"
-                                    name=""
                                     multiline
                                     fullWidth
-                                    helperText="Please enter a first and last name with both first letters capitalized."
+                                    helperText="Please enter a first and/or last name."
                                     variant="filled"
                                     sx={{ flexWrap: "wrap" }}
                                     onChange={(event) => {
@@ -221,11 +220,6 @@ export default function ValidationTextFields(props) {
                     <KeyboardArrowUpIcon />
                 </Fab>
             </ScrollTop>
-            <Fade unmountOnExit in={true} timeout={2000}>
-                <div>
-                    <BottomNav />
-                </div>
-            </Fade>
         </React.Fragment>
     )
 }

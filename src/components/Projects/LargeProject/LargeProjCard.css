@@ -1,7 +1,0 @@
-.LargeCard {
-    transition: all 0.15s linear !important;
-    max-width: 800px;
-}
-.LargeCard:hover {
-    max-width: 850px;
-}
