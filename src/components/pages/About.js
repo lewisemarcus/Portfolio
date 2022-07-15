@@ -7,7 +7,8 @@ export const About = () => {
     const location = useLocation()
     return (
         <div className="sections" data-aos="fade-up">
-            <ParticleEffect />
+            {location.pathname.split("/")[1] === "about" && <ParticleEffect />}
+
             <section className="about">
                 <div className="container flex">
                     <div className="left">

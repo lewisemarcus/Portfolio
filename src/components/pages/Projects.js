@@ -9,7 +9,10 @@ export const Projects = () => {
         <>
             <article data-aos="fade-up">
                 <div className="container articleContainer">
-                    <ParticleEffect />
+                    {location.pathname.split("/")[1] === "projects" && (
+                        <ParticleEffect />
+                    )}
+
                     <Heading title="Projects" />
                     <div className="content grid3">
                         {projects.map((items) => {

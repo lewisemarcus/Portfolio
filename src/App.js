@@ -3,6 +3,7 @@ import { Footer } from "./components/common/Footer"
 import { Pages } from "./components/pages/Pages"
 import AOS from "aos"
 import { useEffect } from "react"
+import BasicSpeedDial from "./components/SpeedDial"
 import "aos/dist/aos.css"
 function App() {
     useEffect(() => {
@@ -13,6 +14,7 @@ function App() {
     return (
         <>
             <Pages />
+            <BasicSpeedDial />
             <Footer />
         </>
     )
