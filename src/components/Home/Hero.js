@@ -19,9 +19,6 @@ export const Hero = () => {
                         />
                     </h1>
                     <p data-aos="fade-left">{home.desc}</p>
-                    <button className="primaryBtn" data-aos="fade-up-right">
-                        View Resume
-                    </button>
                 </div>
             </section>
         </>

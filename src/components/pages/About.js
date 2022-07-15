@@ -24,8 +24,17 @@ export const About = () => {
                         <Heading title="About Me" />
                         <p>{about.desc}</p>
                         <p>{about.desc1}</p>
-                        <button>View Resume</button>
-                        <button className="primaryBtn">View Resume</button>
+                        <button
+                            className="primaryBtn"
+                            onClick={() => {
+                                window.open(
+                                    "https://docs.google.com/document/d/1G4aW97dNlXFZpiCyOIOB0LQqFmEtDnRP/edit?usp=sharing&ouid=104023069321723191196&rtpof=true&sd=true",
+                                    "_blank",
+                                )
+                            }}
+                        >
+                            View Resume
+                        </button>
                     </div>
                 </div>
             </section>
