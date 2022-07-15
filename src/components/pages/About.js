@@ -23,7 +23,7 @@ export const About = () => {
                             alt="profile picture"
                         />
                     </div>
-                    <div className="right" data-aos="fade-down-left">
+                    <div className="right" data-aos="fade-down">
                         <Heading title="About Me" />
                         <p>{about.desc}</p>
                         <p>{about.desc1}</p>
@@ -44,7 +44,12 @@ export const About = () => {
             {location.pathname.split("/")[1] === "" && (
                 <div
                     className="arrow"
-                    style={{ marginTop: "-50px", marginBottom: "200px" }}
+                    style={{
+                        marginTop:
+                            window.innerWidth > "530px" ? "-50px" : "100px",
+                        marginBottom:
+                            window.innerWidth > "530px" ? "200px" : "150px",
+                    }}
                 >
                     <span></span>
                     <span></span>

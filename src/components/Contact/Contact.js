@@ -12,7 +12,7 @@ import Fade from "@mui/material/Fade"
 import SendIcon from "@mui/icons-material/Send"
 import sendEmail from "../../services/email-service"
 import "./Contact.css"
-
+import { useLocation } from "react-router-dom"
 function ScrollTop(props) {
     const { children, window } = props
     // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -44,7 +44,7 @@ function ScrollTop(props) {
                 sx={{
                     position: "fixed",
                     bottom: 16,
-                    right: 16,
+                    right: 20,
                     zIndex: "150 !important",
                 }}
             >
@@ -107,12 +107,14 @@ export default function Contact(props) {
     React.useEffect(() => {
         document.getElementById("message-error-helper").classList.add("message")
     })
-
+    const location = useLocation()
     return (
         <React.Fragment>
             <div id="back-to-top-anchor" style={{ marginBottom: 50 }}></div>
             <Container data-aos="fade-up">
-                <ParticleEffect />
+                {location.pathname.split("/")[1] === "contact" && (
+                    <ParticleEffect />
+                )}
 
                 <Fade unmountOnExit in={true} timeout={500}>
                     <div style={{ display: "flex", justifyContent: "center" }}>

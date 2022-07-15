@@ -12,8 +12,9 @@ const ParticleEffect = () => {
 
     const particlesLoaded = (container) => {}
     const particleStyle = {
-        position: "fixed",
+        position: "absolute",
         zIndex: "-1 !important",
+        width: "100vw !important",
     }
     return (
         <Particles
