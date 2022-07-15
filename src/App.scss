@@ -116,6 +116,11 @@ button {
 .primaryBtn {
     background: none;
     border: 2px solid var(--primaryColor);
+    transition: all 0.25s;
+}
+
+.primaryBtn:hover {
+    background: #1f87ff;
 }
 // .sections {
 //     width: 100%;
