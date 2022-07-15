@@ -99,7 +99,7 @@ export const projects = [
         body: "In the Note Taker application, a user is able to create, update, and delete notes through database interaction.",
         github: "https://github.com/lewisemarcus/NoteTaker",
         deployed: "https://secure-fortress-62772.herokuapp.com/",
-        cover: "/static/images/NoteTaker.jpg",
+        cover: "/static/images/noteTaker.jpg",
         contributions: "https://github.com/lewisemarcus/NoteTaker/commits/main",
         tech: "JavaScript, Express.js, Node.js, MySQL, CSS",
         role: "All",
