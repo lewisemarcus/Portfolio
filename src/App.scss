@@ -118,6 +118,15 @@ button {
     border: 2px solid var(--primaryColor);
     transition: all 0.25s;
 }
+.skillBtn {
+    cursor: default;
+    border-radius: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: none;
+    border-bottom: 2px solid var(--primaryColor);
+    transition: all 0.25s;
+}
 
 .primaryBtn:hover {
     background: #1f87ff;
