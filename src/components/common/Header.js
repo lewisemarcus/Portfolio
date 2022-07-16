@@ -41,7 +41,7 @@ export const Header = () => {
                         })}
                     </div>
                     <button
-                        className="toggle"
+                        className="toggle icon"
                         onClick={() => {
                             setResponsive(!responsive)
                         }}
