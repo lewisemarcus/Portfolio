@@ -5,7 +5,10 @@ import { Menu } from "@mui/icons-material"
 
 export const Header = () => {
     const [responsive, setResponsive] = useState(false)
-
+    const navHandler = () => {
+        document.getElementById("navbar").classList.remove("hideMenu")
+        document.getElementById("navbar").classList.add("nav")
+    }
     return (
         <>
             <header>
@@ -21,10 +24,17 @@ export const Header = () => {
                         />
                     </div>
 
-                    <div className={responsive ? "hideMenu" : "nav"}>
+                    <div
+                        id="navbar"
+                        className={responsive ? "hideMenu" : "nav"}
+                    >
                         {navlink.map((links, i) => {
                             return (
-                                <Link to={links.url} key={i}>
+                                <Link
+                                    to={links.url}
+                                    key={i}
+                                    onClick={navHandler}
+                                >
                                     {links.text}
                                 </Link>
                             )
