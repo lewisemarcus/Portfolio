@@ -2,6 +2,7 @@ import { home } from "../data/data"
 import Typewriter from "typewriter-effect"
 import ParticleEffect from "../common/Particles"
 import { width } from "@mui/system"
+import { useEffect, useState } from "react"
 const skillList = [
     "Javascript",
     "Node.js",
@@ -15,9 +16,16 @@ const skillList = [
     "MySQL",
 ]
 export const Hero = () => {
+    const [windowW, setWindowW] = useState(window.innerWidth)
+
+    useEffect(() => {
+        window.addEventListener("resize", () => {
+            setWindowW(window.innerWidth)
+        })
+    }, [window.innerWidth])
     return (
         <>
-            <section className="hero sections">
+            <section className="hero" style={{ marginTop: 220 }}>
                 <ParticleEffect />
                 <div className="heroContainer">
                     <h3 data-aos="fade-right">{home.text}</h3>
@@ -37,6 +45,7 @@ export const Hero = () => {
                             display: "flex",
                             color: "#1f87ff",
                             flexWrap: "wrap",
+                            position: "relative",
                         }}
                     >
                         {skillList.map((skill) => {
@@ -46,14 +55,14 @@ export const Hero = () => {
                                 </button>
                             )
                         })}
+                        <div className="arrow heroArrow">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                 </div>
             </section>
-            <div className="arrow">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </>
     )
 }

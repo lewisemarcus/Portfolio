@@ -55,10 +55,11 @@ h6 {
 }
 
 .arrow {
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: -120px;
+    margin-top: 50px;
     position: relative;
 }
 .arrow span {
@@ -131,24 +132,9 @@ button {
 .primaryBtn:hover {
     background: #1f87ff;
 }
-// .sections {
-//     width: 100%;
-//     height: calc(100vh - 70px);
-//     position: relative;
-//     top: 70px;
-//     scroll-behavior: smooth;
-//     scroll-snap-type: y mandatory;
-//     scrollbar-width: none;
-
-//     &::-webkit-scrollbar {
-//         display: none;
-//     }
-//     > * {
-//         width: 100%;
-//         height: calc(100vh - 70px);
-//         scroll-snap-align: start;
-//     }
-// }
+.sections {
+    margin-top: 250px;
+}
 /*---HEADER---*/
 header {
     background-color: var(--headingColor);
@@ -172,6 +158,9 @@ header a {
     header .nav {
         display: none;
     }
+    .sections {
+        margin-top: 275px;
+    }
     header a {
         width: 100%;
         display: block;
@@ -193,7 +182,7 @@ header a {
     }
 }
 section {
-    height: 90vh;
+    height: 100%;
     display: flex;
     align-items: center;
 }
@@ -211,6 +200,7 @@ section {
     margin: auto;
     text-align: center;
     z-index: 1;
+    margin-bottom: 0;
 }
 .hero h1 {
     display: flex;
@@ -337,6 +327,11 @@ footer i {
         margin-right: 6%;
     }
 }
+@media screen and(max-width: 976px) {
+    .heroContainer {
+        margin-bottom: 0;
+    }
+}
 @media screen and (max-width: 768px) {
     .hero {
         height: 60vh;
@@ -375,6 +370,7 @@ footer i {
         justify-content: space-between;
     }
 }
+
 @media screen and (max-width: 530px) {
     .hero {
         height: 60vh;
@@ -422,8 +418,29 @@ footer i {
     .logo {
         padding-left: 10px;
     }
-    .arrow {
-        margin-top: 50px;
-        margin-bottom: 50px;
+}
+@media screen and (max-width: 611px) {
+    .sections {
+        margin-top: 500px;
+    }
+}
+@media screen and (max-width: 611px) {
+    .sections {
+        margin-top: 500px;
+    }
+}
+@media screen and (max-width: 439px) {
+    .sections {
+        margin-top: 650px;
+    }
+}
+@media screen and (max-width: 412px) {
+    .sections {
+        margin-top: 900px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .sections {
+        margin-top: 1000px;
     }
 }
