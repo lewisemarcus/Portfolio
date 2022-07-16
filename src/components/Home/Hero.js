@@ -25,7 +25,7 @@ export const Hero = () => {
     }, [window.innerWidth])
     return (
         <>
-            <section className="hero" style={{ marginTop: 220 }}>
+            <section className="hero">
                 <ParticleEffect />
                 <div className="heroContainer">
                     <h3 data-aos="fade-right">{home.text}</h3>

@@ -195,6 +195,7 @@ section {
 /*---HERO---*/
 .hero {
     position: relative;
+    margin-top: 220px;
 }
 
 .heroContainer {
@@ -337,6 +338,7 @@ footer i {
 @media screen and (max-width: 768px) {
     .hero {
         height: 60vh;
+        margin-top: 50px;
     }
     .heroContainer {
         max-width: 80%;
@@ -374,6 +376,10 @@ footer i {
 }
 
 @media screen and (max-width: 530px) {
+    .skillBtn {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
     .hero {
         height: 60vh;
     }
@@ -421,28 +427,29 @@ footer i {
         padding-left: 10px;
     }
 }
+
 @media screen and (max-width: 611px) {
     .sections {
-        margin-top: 500px;
+        margin-top: 400px;
     }
 }
-@media screen and (max-width: 611px) {
+@media screen and (max-width: 530px) {
     .sections {
-        margin-top: 500px;
+        margin-top: 250px;
     }
 }
-@media screen and (max-width: 439px) {
+@media screen and (max-width: 430px) {
     .sections {
-        margin-top: 650px;
+        margin-top: 400px;
     }
 }
 @media screen and (max-width: 412px) {
     .sections {
-        margin-top: 900px;
+        margin-top: 500px;
     }
 }
 @media screen and (max-width: 375px) {
     .sections {
-        margin-top: 1000px;
+        margin-top: 500px;
     }
 }
