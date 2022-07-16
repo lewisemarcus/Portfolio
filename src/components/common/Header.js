@@ -2,12 +2,13 @@ import { Link } from "react-router-dom"
 import { navlink, logo } from "../data/data"
 import { useState } from "react"
 import { Menu } from "@mui/icons-material"
-
+import { Turn as Hamburger } from "hamburger-react"
 export const Header = () => {
     const [responsive, setResponsive] = useState(false)
     const navHandler = () => {
         document.getElementById("navbar").classList.remove("hideMenu")
         document.getElementById("navbar").classList.add("nav")
+        setResponsive(!responsive)
     }
     return (
         <>
@@ -46,7 +47,7 @@ export const Header = () => {
                             setResponsive(!responsive)
                         }}
                     >
-                        <Menu className="icon"></Menu>
+                        <Hamburger toggled={responsive} />
                     </button>
                 </div>
             </header>
