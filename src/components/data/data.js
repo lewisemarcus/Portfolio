@@ -1,11 +1,4 @@
-import {
-    AddLocationAltOutlined,
-    PhoneIphone,
-    EmailOutlined,
-    Phone,
-    GitHub,
-    LinkedIn,
-} from "@mui/icons-material"
+import { Phone, GitHub, LinkedIn } from "@mui/icons-material"
 
 export const navlink = [
     {
