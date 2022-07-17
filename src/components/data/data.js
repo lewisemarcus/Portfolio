@@ -126,6 +126,6 @@ export const social = [
     },
     {
         icon: <Phone />,
-        link: "tel:+9493224186",
+        link: "tel:+19493224186",
     },
 ]

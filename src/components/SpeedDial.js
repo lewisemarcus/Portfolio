@@ -12,7 +12,7 @@ const actions = [
     {
         icon: <PhoneIcon />,
         name: "Call",
-        link: "tel:+9493224186",
+        link: "tel:+19493224186",
     },
     {
         icon: <EmailIcon />,
