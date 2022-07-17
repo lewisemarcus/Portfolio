@@ -38,6 +38,7 @@ export const Projects = () => {
                                         </h3>
                                         <a
                                             href={items.contributions}
+                                            target="_blank"
                                             style={{
                                                 marginTop: 10,
                                                 marginBottom: 10,
