@@ -8,12 +8,10 @@ export const About = () => {
     return (
         <div
             className={
-                location.pathname.split("/")[1] === "about" ? "" : "sections"
+                location.pathname.split("/")[1] === "about"
+                    ? "aboutSolo"
+                    : "sections"
             }
-            style={{
-                marginTop:
-                    location.pathname.split("/")[1] === "about" ? 150 : 0,
-            }}
             data-aos="fade-up"
         >
             {location.pathname.split("/")[1] === "about" && <ParticleEffect />}
