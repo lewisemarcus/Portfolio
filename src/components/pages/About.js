@@ -6,7 +6,16 @@ import { useLocation } from "react-router-dom"
 export const About = () => {
     const location = useLocation()
     return (
-        <div className="sections" data-aos="fade-up">
+        <div
+            className={
+                location.pathname.split("/")[1] === "about" ? "" : "sections"
+            }
+            style={{
+                marginTop:
+                    location.pathname.split("/")[1] === "about" ? 150 : 0,
+            }}
+            data-aos="fade-up"
+        >
             {location.pathname.split("/")[1] === "about" && <ParticleEffect />}
 
             <section className="about">

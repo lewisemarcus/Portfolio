@@ -7,7 +7,15 @@ export const Projects = () => {
     const location = useLocation()
     return (
         <>
-            <article data-aos="fade-up">
+            <article
+                data-aos="fade-up"
+                style={{
+                    marginTop:
+                        location.pathname.split("/")[1] === "projects"
+                            ? 100
+                            : 0,
+                }}
+            >
                 <div className="container articleContainer">
                     {location.pathname.split("/")[1] === "projects" && (
                         <ParticleEffect />

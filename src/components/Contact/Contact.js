@@ -13,6 +13,7 @@ import SendIcon from "@mui/icons-material/Send"
 import sendEmail from "../../services/email-service"
 import "./Contact.css"
 import { useLocation } from "react-router-dom"
+import { Heading } from "../common/Heading"
 function ScrollTop(props) {
     const { children, window } = props
     // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -111,11 +112,17 @@ export default function Contact(props) {
     return (
         <React.Fragment>
             <div id="back-to-top-anchor" style={{ marginBottom: 50 }}></div>
-            <Container data-aos="fade-up">
+            <Container
+                data-aos="fade-up"
+                style={{
+                    marginTop:
+                        location.pathname.split("/")[1] === "contact" ? 100 : 0,
+                }}
+            >
                 {location.pathname.split("/")[1] === "contact" && (
                     <ParticleEffect />
                 )}
-
+                <Heading title="Contact" />
                 <Fade unmountOnExit in={true} timeout={500}>
                     <div style={{ display: "flex", justifyContent: "center" }}>
                         <Box
