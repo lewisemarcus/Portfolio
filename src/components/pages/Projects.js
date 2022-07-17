@@ -49,6 +49,7 @@ export const Projects = () => {
                                         </a>
                                         <a
                                             href={items.deployed}
+                                            target="_blank"
                                             style={{
                                                 marginBottom: 10,
                                                 textDecoration: "none",
