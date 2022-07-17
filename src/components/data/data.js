@@ -22,7 +22,7 @@ export const home = {
     text: "HELLO I'M",
     name: "MARCUS LEWIS",
     post: "A FULL-STACK DEVELOPER",
-    desc: `I am a Full Stack Web Developer with a background in Content Analysis, denoted by my certificate in Full-Stack Development from UCI's Full-Stack Program. Below are some of the technologies I've used along the way.`,
+    desc: `I am a Full Stack Web Developer with a background in Content Analysis, denoted by my certificate in Full-Stack Development from UCI's Full-Stack Program. Below are some of the technologies I've used while developing sites/apps.`,
 }
 export const logo = "/static/images/bestlogo.png"
 export const about = {
