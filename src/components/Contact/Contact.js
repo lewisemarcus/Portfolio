@@ -116,10 +116,10 @@ export default function Contact(props) {
                 data-aos="fade-up"
                 style={{
                     marginTop:
-                        location.pathname.split("/")[1] === "contact" ? 100 : 0,
+                        location.pathname.split("/")[1] === "Contact" ? 100 : 0,
                 }}
             >
-                {location.pathname.split("/")[1] === "contact" && (
+                {location.pathname.split("/")[1] === "Contact" && (
                     <ParticleEffect />
                 )}
                 <Heading title="Contact" />

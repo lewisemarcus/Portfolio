@@ -29,6 +29,16 @@ a {
 a:hover {
     color: var(--primaryColor);
 }
+.link {
+    color: var(--silver);
+}
+.link:hover {
+    color: var(--primaryColor);
+}
+
+.activeLink {
+    color: var(--primaryColor);
+}
 p {
     color: var(--silver);
     font-size: 15px;

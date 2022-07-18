@@ -11,9 +11,9 @@ export const Pages = () => {
                 <Header />
                 <Switch>
                     <Route exact path="/" component={Home} />
-                    <Route exact path="/about" component={About} />
-                    <Route exact path="/projects" component={Projects} />
-                    <Route exact path="/contact" component={Contact} />
+                    <Route exact path="/About" component={About} />
+                    <Route exact path="/Projects" component={Projects} />
+                    <Route exact path="/Contact" component={Contact} />
                 </Switch>
             </Router>
         </>

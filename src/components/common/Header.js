@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom"
 import { navlink, logo } from "../data/data"
 import { useState } from "react"
-import { Menu } from "@mui/icons-material"
+import { useLocation } from "react-router-dom"
 import { Turn as Hamburger } from "hamburger-react"
 export const Header = () => {
+    const location = useLocation()
     const [responsive, setResponsive] = useState(false)
     const navHandler = () => {
         document.getElementById("navbar").classList.remove("hideMenu")
         document.getElementById("navbar").classList.add("nav")
         setResponsive(!responsive)
     }
+
     return (
         <>
             <header>
@@ -32,6 +34,12 @@ export const Header = () => {
                         {navlink.map((links, i) => {
                             return (
                                 <Link
+                                    className={
+                                        location.pathname.split("/")[1] ==
+                                        links.link
+                                            ? "activeLink"
+                                            : "link"
+                                    }
                                     to={links.url}
                                     key={i}
                                     onClick={navHandler}

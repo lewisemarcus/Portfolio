@@ -2,19 +2,23 @@ import { Phone, GitHub, LinkedIn } from "@mui/icons-material"
 
 export const navlink = [
     {
+        link: "",
         url: "/",
         text: "Home",
     },
     {
-        url: "/about",
+        link: "About",
+        url: "/About",
         text: "About",
     },
     {
-        url: "/projects",
+        link: "Projects",
+        url: "/Projects",
         text: "Projects",
     },
     {
-        url: "/contact",
+        link: "Contact",
+        url: "/Contact",
         text: "Contact",
     },
 ]

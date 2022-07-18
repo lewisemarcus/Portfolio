@@ -11,13 +11,13 @@ export const Projects = () => {
                 data-aos="fade-up"
                 style={{
                     marginTop:
-                        location.pathname.split("/")[1] === "projects"
+                        location.pathname.split("/")[1] === "Projects"
                             ? 100
                             : 0,
                 }}
             >
                 <div className="container articleContainer">
-                    {location.pathname.split("/")[1] === "projects" && (
+                    {location.pathname.split("/")[1] === "Projects" && (
                         <ParticleEffect />
                     )}
 

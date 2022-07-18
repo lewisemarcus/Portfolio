@@ -8,13 +8,13 @@ export const About = () => {
     return (
         <div
             className={
-                location.pathname.split("/")[1] === "about"
+                location.pathname.split("/")[1] === "About"
                     ? "aboutSolo"
                     : "sections"
             }
             data-aos="fade-up"
         >
-            {location.pathname.split("/")[1] === "about" && <ParticleEffect />}
+            {location.pathname.split("/")[1] === "About" && <ParticleEffect />}
 
             <section className="about">
                 <div className="container flex">
