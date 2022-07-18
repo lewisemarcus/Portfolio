@@ -1,4 +1,5 @@
 import * as React from "react"
+
 import Particles from "react-tsparticles"
 import { loadFull } from "tsparticles"
 
@@ -16,6 +17,7 @@ const ParticleEffect = () => {
         zIndex: "-1 !important",
         width: "100vw !important",
     }
+
     return (
         <Particles
             id="tsparticles"

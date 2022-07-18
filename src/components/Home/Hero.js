@@ -26,7 +26,6 @@ export const Hero = () => {
     return (
         <>
             <section className="hero">
-                <ParticleEffect />
                 <div className="heroContainer">
                     <h3 data-aos="fade-right">{home.text}</h3>
                     <h1>

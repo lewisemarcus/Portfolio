@@ -14,8 +14,6 @@ export const About = () => {
             }
             data-aos="fade-up"
         >
-            {location.pathname.split("/")[1] === "About" && <ParticleEffect />}
-
             <section className="about">
                 <div className="container flex">
                     <div className="left">

@@ -17,10 +17,6 @@ export const Projects = () => {
                 }}
             >
                 <div className="container articleContainer">
-                    {location.pathname.split("/")[1] === "Projects" && (
-                        <ParticleEffect />
-                    )}
-
                     <Heading title="Projects" />
                     <div className="content grid3">
                         {projects.map((items) => {

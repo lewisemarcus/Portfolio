@@ -119,9 +119,6 @@ export default function Contact(props) {
                         location.pathname.split("/")[1] === "Contact" ? 100 : 0,
                 }}
             >
-                {location.pathname.split("/")[1] === "Contact" && (
-                    <ParticleEffect />
-                )}
                 <Heading title="Contact" />
                 <Fade unmountOnExit in={true} timeout={500}>
                     <div style={{ display: "flex", justifyContent: "center" }}>
