@@ -36,7 +36,7 @@ export const About = () => {
                             className="primaryBtn"
                             onClick={() => {
                                 window.open(
-                                    "https://docs.google.com/document/d/19dFzMjJDZzrgA9dttHqgqtIO_ayKti0nWINVoGuTD40/edit?usp=sharing",
+                                    "https://drive.google.com/file/d/1LrOWQZpVMrFldk6d1WJwz46RHEtjlx4b/view?usp=sharing",
                                     "_blank",
                                 )
                             }}
