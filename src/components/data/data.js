@@ -80,7 +80,7 @@ export const projects = [
         body: "This website displays a scrollable/interactive map with a grid of colored points representing fine particle pollution levels. It uses (quasi) unlimited free APIs.",
         github: "https://github.com/lewisemarcus/PollutionMap",
         deployed: "https://lewisemarcus.github.io/PollutionMap/",
-        cover: "/static/images/pollutionnew.PNG",
+        cover: "/static/images/pollutionnew.png",
         contributions:
             "https://github.com/lewisemarcus/PollutionMap/commits?author=lewisemarcus",
         tech: "JavaScript, Bulma, OpenLayers Maps, WAQI API, IP API",
