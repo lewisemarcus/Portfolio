@@ -36,6 +36,17 @@ export const about = {
 
 export const projects = [
     {
+        title: "Chat Snap: Instant Messenger",
+        name: "ChatSnap",
+        body: "A performant Android application that allows users to send and receive messages to added contacts in real-time. Users are connected to cloud storage databases for profile editing as well as manage contacts and messages. Implemented push notification functionality for friend requests and messages received.",
+        github: "https://www.github.com/lewisemarcus/chatSnap",
+        deployed: "https://play.google.com/store/apps/details?id=com.chatSnap",
+        cover: "/static/images/phonebg.png",
+        contributions:
+            "https://github.com/lewisemarcus/chatSnap/commits?author=lewisemarcus",
+        tech: "JavaScript, Python, Flask, MongoDB Atlas, React Native, Expo, Firebase, Web Socket, JWT, Google Play",
+    },
+    {
         title: "Soundify: Listen/Jive/Relax",
         name: "Soundify",
         body: "Soundify is a online music player where users are required to create an account or login to our site to listen, upload, and comment on songs. Users can search for songs and create and update playlists.",
@@ -44,8 +55,8 @@ export const projects = [
         cover: "/static/images/soundify2.png",
         contributions:
             "https://github.com/lewisemarcus/Soundify/commits?author=lewisemarcus",
-        tech: "JavaScript, MongoDB Atlas, Amazon S3, GraphQL, React, Node.js, Express.js, AntDesign",
-        role: "Database design and implementation, GraphQL integration, front-end integration, audio spectrum/waveform creation, audio player integration",
+        tech: "JavaScript, MongoDB Atlas, Amazon S3, GraphQL, React, Node.js, Express.js, AntDesign, JWT, Certbot",
+        role: "Database design and implementation, GraphQL integration, front-end integration, audio spectrum/waveform creation, audio player integration, SSL certification",
         href: "#soundify",
         id: "soundify",
     },
@@ -69,7 +80,7 @@ export const projects = [
         body: "This website displays a scrollable/interactive map with a grid of colored points representing fine particle pollution levels. It uses (quasi) unlimited free APIs.",
         github: "https://github.com/lewisemarcus/PollutionMap",
         deployed: "https://lewisemarcus.github.io/PollutionMap/",
-        cover: "/static/images/pollMap.PNG",
+        cover: "/static/images/pollutionnew.PNG",
         contributions:
             "https://github.com/lewisemarcus/PollutionMap/commits?author=lewisemarcus",
         tech: "JavaScript, Bulma, OpenLayers Maps, WAQI API, IP API",
@@ -102,20 +113,6 @@ export const projects = [
         role: "All",
         href: "#noteTaker",
         id: "noteTaker",
-    },
-    {
-        title: "Weather Dashboard: 5-Day Forecart for Cities",
-        name: "Weather Dashboard",
-        body: "This web application allows a user to search any city of their choosing and receive a 5-Day forecast relative to the time zone of the city.",
-        github: "https://github.com/lewisemarcus/WeatherDashboard",
-        deployed: "https://lewisemarcus.github.io/WeatherDashboard/",
-        cover: "/static/images/WeatherDash.jpg",
-        contributions:
-            "https://github.com/lewisemarcus/WeatherDashboard/commits/main",
-        tech: "JavaScript, HTML, CSS, OpenWeather API",
-        role: "All",
-        href: "#weatherDash",
-        id: "weatherDash",
     },
 ]
 
